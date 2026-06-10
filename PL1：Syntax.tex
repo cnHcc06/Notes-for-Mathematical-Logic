@@ -1,0 +1,433 @@
+\documentclass{article}
+\usepackage{CJK}
+\usepackage{amsmath,amssymb,graphicx,theorem,latexsym}
+
+%%%%%%%%%% Start TeXmacs macros
+\catcode`\<=\active \def<{
+\fontencoding{T1}\selectfont\symbol{60}\fontencoding{\encodingdefault}}
+{\theorembodyfont{\rmfamily}\newtheorem{definition}{Definition}}
+\newtheorem{lemma}{Lemma}
+\newcommand{\nonconverted}[1]{\mbox{}}
+\newtheorem{theorem}{Theorem}
+%%%%%%%%%% End TeXmacs macros
+
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+
+\title{Introduction to Mathematical Logic --- Stynax}
+
+\maketitle
+
+{\tableofcontents}
+
+\section{Argument论证}
+
+\subsection{consist}
+
+1.Declarative Sentence \ 陈述
+
+2.Common Sence \ 常识
+
+3.Inference Rules \ 推理
+
+\
+
+\section{Proposition}
+
+\subsection{Proposition (命题)}
+
+A proposition is a declarative sentence that can be judged as
+{\underline{either true or false.}}
+
+"This sentence is false."is not a proposition.
+
+\subsection{Atomic Proposition (原子命题)}
+
+A proposition that does not contain any smaller part that is still a
+proposition.
+
+\subsection{Compound Proposition (复合命题)}
+
+A proposition that involves the {\underline{assembly}} of multiple
+propositions is called a compound proposition.
+
+\begin{tabular}{p{3.0cm}p{3.0cm}p{3.0cm}p{3.0cm}}
+  Connectives & Read as & 名称 & Term\\
+  \hline
+  {\wedge} & and & 合取 & conjunction\\
+  $\vee$ & or & 析取 & disjunction\\
+  $\neg$ & not & 否定 & negation\\
+  {\rightarrow} & if...then... & 蕴含 & implication\\
+  {\leftrightarrow} & if and only if & 等价 & equivalence
+\end{tabular}
+
+\
+
+\
+
+\section{Syntax of propositional Logic
+$\nonconverted{cal*L}^p$（命题逻辑的语法）}
+
+Syntax--grammar
+
+Semantics--language
+
+\subsection{Alphabet of \  \nonconverted{cal*L} \textsuperscript{p}}
+
+\begin{tabular}{|l|l|}
+  \hline
+  Atomic proposition & p,q,r,{...}, $p_1, q_1, r_2,${...}\\
+  \hline
+  Logical connectives & $\wedge, \vee, \neg, \rightarrow, \leftrightarrow$\\
+  \hline
+  Punctuation & ( , )\\
+  \hline
+\end{tabular}
+
+\subsection{Expression of  \nonconverted{cal*L} \textsuperscript{p}}
+
+Expression is the finite string of {\underline{symbols}}.
+
+{\underline{The length of an expression is the number of occurrences of
+symbols in it.}}
+
+Two expressions u and v are {\underline{equal}} if they are of the same length
+and have the same symbols in the same order.
+
+\subsection{(Well-Formed) Formulas of  \nonconverted{cal*L}
+\textsuperscript{p}}
+
+\begin{definition}
+  原子命题定义
+  
+  $\ensuremath{\operatorname{Atom}} (\nonconverted{cal*L}^p)$ is a set of
+  expression of $\nonconverted{cal*L}^p
+  \ensuremath{\operatorname{consisting}}\ensuremath{\operatorname{of}}$ an
+  atom proposition symbol only.
+\end{definition}
+
+\begin{definition}
+  合式公式的定义Well Formed Formula
+  
+  $\ensuremath{\operatorname{Form}} (\nonconverted{cal*L}^p)$ is the smallest
+  set of expression that satisfies (i)(ii)(iii)
+  
+  (i) $\ensuremath{\operatorname{Atom}} (\nonconverted{cal*L}^p) \subseteq
+  \ensuremath{\operatorname{Form}} (\nonconverted{cal*L}^p)$
+  
+  (ii)If $\alpha \in \ensuremath{\operatorname{Form}}
+  (\nonconverted{cal*L}^p), \ensuremath{\operatorname{then}} (\neg \alpha) \in
+  \ensuremath{\operatorname{Form}} (\nonconverted{cal*L}^p) .$
+  
+  (iii)If $\alpha, \beta \in \ensuremath{\operatorname{Form}}
+  (\nonconverted{cal*L}^p), \ensuremath{\operatorname{then}} (a \wedge \beta),
+  (\alpha \vee \beta), (\alpha \rightarrow \beta), (\alpha \leftrightarrow
+  \beta) \in \ensuremath{\operatorname{Form}} (\nonconverted{cal*L}^p)$
+  
+  注意，这种定义的写法存在一定问题：它只说明了存在条件，并没有说明条件唯一。
+  
+  事实上，合式公式的定义基于递归结构，只能是由(i)(ii)(iii)生成的有限表达式。
+\end{definition}
+
+\subsection{Common Properties of Well-Formed Formula}
+
+\begin{lemma}
+  Well-formed formula of $\nonconverted{cal*L}^p$ are non-empty
+  expression.（合式公式非空定理）
+\end{lemma}
+
+\begin{lemma}
+  Every well-formed formula of $\nonconverted{cal*L}^p$ has equal number of
+  openning and closing bracket.
+  
+  （合式公式括号匹配定理）
+\end{lemma}
+
+\noindent\textbf{Proof\ }We will prove "$\ensuremath{\operatorname{Form}}
+(\nonconverted{cal*L}^p)$ of all length has equal number of openning and
+closing bracket" by induction. Let n=the length of the formula.
+\begin{itemize}
+  \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}\item
+  Base Case :n=1:
+  
+  For p is the WFF of length 1.
+  
+  p $\in$ Atom($\nonconverted{cal*L}^p$), is the simpliest WFF.
+  
+  $\#_{(} (p) =\#_{)} (p) = 0 $
+  
+  \item Induction Hypothesis :n<k:
+  
+  Suppose all WFF of length less than k has equal number of openning and
+  closing bracket.
+  
+  \item Induction Step: Now we consider n=k.
+  
+  Let p be a WFF of length k.
+  
+  Case 1:
+  
+  p=$(\neg q)$, then $\#_{(} (p) =\#_{(} (q) +
+  1\ensuremath{\operatorname{and}} \#_{)} (p) =\#_{)} (q) + 1$
+  
+  Because q is a WFF of length k-3, less than k,
+  
+  then according to H.I. $\#_{(} (q) =\#_{)} (q)$
+  
+  So $\#_{(} (p) =\#_{)} (p)$
+  
+  Case 2:
+  
+  p=($q_1 \ensuremath{\operatorname{op}}q_2$) in which op$\in \{ \wedge, \vee,
+  \rightarrow, \leftrightarrow \}$
+  
+  then $\#_{(} (p) =\#_{(} (q_1) +\#_{(} (q_2) + 1$ and $\#_{)} (q) =\#_{)}
+  (q_1) +\#_{)} (q_2) + 1$
+  
+  Because \#$(q_1) \leqslant k - 4 < k,
+  \ensuremath{\operatorname{so}}\ensuremath{\operatorname{does}}\# (q_2)$
+  
+  then according to H.I. \ $\#_{(} (q_1) =\#_{)} (q_1)
+  \ensuremath{\operatorname{and}}\#_{(} (q_2) =\#_{)} (q_2)$
+  
+  So $\#_{(} (p) =\#_{)} (p)$
+  
+  \item Summary:
+  
+  WFF of all length has equal number of openning and closing bracket.
+  
+  \ 
+\end{itemize}
+\hspace*{\fill}$\Box$\medskip
+
+\begin{otherlanguage}{chinese}
+  \begin{lemma}
+    (真前后缀括号不完备定理)
+    \begin{itemize}
+      \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}\item
+      Every proper prefix（真前缀） of a well formed formula in
+      $\nonconverted{cal*L}^p$ has more openning bracket than closing bracket.
+      
+      \item Every proper suffix（真后缀） of a well-formed formula in
+      $\nonconverted{cal*L}^p$ has more closing bracket than openning bracket.
+      
+      \item Hence, proper prefix and proper suffix are not wff in
+      $\nonconverted{cal*L}^p$.
+    \end{itemize}
+  \end{lemma}
+\end{otherlanguage}
+
+\noindent\textbf{Proof\ }Let's prove the theorem about prefix by structural
+induction, that about suffix has a similar proof:
+
+Let $P (\varphi)
+\ensuremath{\operatorname{be}}\ensuremath{\operatorname{the}}\ensuremath{\operatorname{property}}\ensuremath{\operatorname{that}}$
+every proper prefix of the well-formed formula {\varphi} has more opening
+brackets than closing brackets.
+\begin{itemize}
+  \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}\item
+  Base Case : If $\alpha$ is an atom, it has no proper prefixes and $P
+  (\alpha)$ is true.
+  
+  \item Inductive Hypothesis : suppose $\varphi_1, \varphi_2$ be WFF
+  satisfying $P (\varphi_1), P (\varphi_2)$.
+  
+  \item Inductive Step :
+  
+  \ \ \ \ \ Case 1:
+  
+  $p = (\neg \varphi),$
+  
+  let $\varphi'$ be any proper prefix of $\varphi$, so does $p$,then the
+  proper prefix of $p$ can be:
+  
+  1.( ,$P (() $is true.
+  
+  2.($\neg$ , $P ((\neg ) $is true.
+  
+  3.($\neg \varphi'$ , $\#_{(} (( \neg \varphi') =\#_{(} (\varphi') + 1,
+  \#_{)} (( \neg \varphi') =\#_{)} (\varphi')$
+  
+  Because $P (\varphi)$ is true. $\#_{(} (\varphi') >\#_{)} (\varphi')$
+  
+  so $\#_{(} (( \neg \varphi') >\#_{)} (( \neg \varphi') + 1 >\#_{)} (( \neg
+  \varphi')$
+  
+  4.$(\neg \varphi , \#_{(} (\varphi) =\#_{)} (\varphi)
+  \ensuremath{\operatorname{by}}\ensuremath{\operatorname{lamma}}2$, so it is
+  obvious that $P ((\neg \varphi )
+  \ensuremath{\operatorname{is}}\ensuremath{\operatorname{true}}.$
+  
+  \ \ \ \ \ Case2 :
+  
+  $p = (\varphi_1 \ensuremath{\operatorname{op}} \varphi_2),
+  \ensuremath{\operatorname{in}}\ensuremath{\operatorname{which}}\ensuremath{\operatorname{op}}
+  \in \{ \wedge, \vee, \rightarrow, \leftrightarrow \}$,
+  
+  proper prefix of $p$ can be:
+  
+  $\left(  \quad, \quad  \right( \varphi_1' \hspace{1em}, \quad \left(
+  \varphi_1 \quad, \quad \right( \varphi_1 \ensuremath{\operatorname{op}}
+  \quad, \quad \left( \varphi_1 \ensuremath{\operatorname{op}} \varphi_2'
+  \quad \right. \ensuremath{\operatorname{and}} \quad (\varphi_1
+  \ensuremath{\operatorname{op}} \varphi_2 $
+  
+  We can easily prove that all of them satisfy $P (p')
+  \ensuremath{\operatorname{is}}\ensuremath{\operatorname{true}}.$
+  
+  \item Summary
+  
+  Every proper prefix of the well-formed formula p satisfies $P (p')$ is true.
+\end{itemize}
+\hspace*{\fill}$\Box$\medskip
+
+\subsection{Parse Tree of $\nonconverted{cal*L}^p$}
+
+\begin{definition}
+  解析树定义
+  
+  A parse tree of a formula in $\nonconverted{cal*L}^p
+  \ensuremath{\operatorname{is}}a$tree that:
+  \begin{itemize}
+    \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}\item
+    The root is a formula.
+    
+    \item Leaves are atoms.
+    
+    \item Each internal node is formed by applying some formation rule on its
+    children.
+  \end{itemize}
+\end{definition}
+
+\begin{lemma}
+  解析树和合式公式的等价性
+  
+  An expression of $\nonconverted{cal*L}^p \ensuremath{\operatorname{is}}$a
+  well-formed formula if and only if there is a parse tree of it.
+\end{lemma}
+
+$((p \vee q) \rightarrow ((\neg p) \leftrightarrow (q \wedge r)))$
+
+\begin{align}
+  \includegraphics[width=4.159238488783943cm,height=2.996130132493769cm]{PL1：Syntax-1.pdf}
+  &  \nonumber\\
+  \ensuremath{\operatorname{Simplified}}\ensuremath{\operatorname{Parse}}\ensuremath{\operatorname{Tree}}:
+  &  \nonumber\\
+  \hspace{-0.016791289518562246cm}\includegraphics[width=1.8328987931260659cm,height=2.8848386462022826cm]{PL1：Syntax-2.pdf}\hspace{-0.0041978223796406144cm}
+  &  \nonumber
+\end{align}
+
+\begin{definition}
+  子公式定义
+  
+  A formula G is a subformula of formula F if G occurs within F. G is a proper
+  subformula of F if G $\neq$ F.
+  
+  The nodes of the (unsimplified) parse tree of F form the set of subformulas
+  of F.
+\end{definition}
+
+\subsection{The Unique Readability Theorem}
+
+\begin{theorem}
+  唯一可读性定理
+  
+  There is a unique way to construct every well-formed formula.
+  
+  这条定理指出了，任意一个合式公式，只能唯一地分解成一个个最小的命题符号，以及唯一确定它们构建该合式公式的方式。
+\end{theorem}
+
+这是由expression的等价性决定的，``Two expressions u and v are
+{\underline{equal}} if they are of the same length and have the same symbols
+in the same order.''
+
+\noindent\textbf{Proof\ }\
+
+\begin{align}
+  \varphi = \left\{\begin{array}{l}
+    (\neg \alpha)  \left\{\begin{array}{l}
+      \varphi = (\neg \alpha') \quad \Rightarrow \alpha = \alpha'\\
+      \varphi = (\alpha' \ast \beta') \Rightarrow \alpha'
+      \ensuremath{\operatorname{starts}} \neg \Rightarrow
+      \ensuremath{\operatorname{contradictory}}
+    \end{array}\right.\\
+    \\
+    (\alpha \ast \beta) \left\{\begin{array}{l}
+      \varphi = (\neg \alpha') \Rightarrow \alpha
+      \ensuremath{\operatorname{starts}} \neg \Rightarrow
+      \ensuremath{\operatorname{contradictory}}\\
+      \\
+      \\
+      \varphi = (\alpha' \ast \beta') \left\{\begin{array}{l}
+        a, b = a', b'\\
+        \alpha
+        \ensuremath{\operatorname{is}}a\ensuremath{\operatorname{profer}}\ensuremath{\operatorname{prefix}}\ensuremath{\operatorname{of}}
+        \alpha' \ensuremath{\operatorname{or}}\ensuremath{\operatorname{vise}}
+      \end{array}\right.
+    \end{array}\right.
+  \end{array}\right. &  \nonumber
+\end{align}
+
+\ \hspace*{\fill}$\Box$\medskip
+
+\
+
+现观察异或公式：
+
+\begin{align}
+  (p \vee q) \wedge (\neg (p \wedge q)) = (p \wedge (\neg q)) \vee (q \wedge
+  (\neg p)) & =\ensuremath{\operatorname{XOR}} (p, q) \nonumber
+\end{align}
+
+这两个公式逻辑等价，但他们是不同的合式公式，不违背唯一可读性定理。
+
+\
+
+\section{Conventions}
+
+For readability, we use the following convention, which states that we may
+drop the outermost parentheses.
+
+\subsection{Parentheses}
+
+Parentheses are used to resolve ambiguity.
+
+If F or (F) is a formula, then we view F and (F) as the same formula
+
+\subsection{Precedence and Associativity}
+
+If no parentheses are present, we could use precedence and associativity to
+disambiguate formulas.
+\begin{itemize}
+  \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}\item
+  Priority:$() \hspace{1em} > \quad \neg \quad > \quad \wedge \quad > \quad
+  \hspace{1em} \vee \quad > \quad \rightarrow \quad > \quad \leftrightarrow$
+  
+  \item Associtivity:
+  
+  $\wedge, \vee \ensuremath{\operatorname{and}} \leftrightarrow
+  \ensuremath{\operatorname{are}}\ensuremath{\operatorname{associative}}
+  (阅读时默认按从左到右的自然顺序，若顺序相同可省略括号)$
+  
+  {\rightarrow} is right associative($默认按从右到左的顺序$)
+\end{itemize}
+\begin{align}
+  \neg p \rightarrow p \wedge \neg q \vee r \leftrightarrow q &  \nonumber\\
+  (\neg p) \rightarrow p \wedge (\neg q) \vee r \leftrightarrow q & 
+  \nonumber\\
+  (\neg p) \rightarrow (p \wedge (\neg q) \vee r) \leftrightarrow q & 
+  \nonumber\\
+  (((\neg p) \rightarrow (p \wedge (\neg q) \vee r)) \leftrightarrow q) & 
+  \nonumber
+\end{align}
+
+\
+
+\
+
+\
+
+\
+
+\end{CJK*}
+\end{document}
