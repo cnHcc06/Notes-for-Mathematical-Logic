@@ -1,0 +1,502 @@
+<TMU|<tuple|1.1.0|2026.1.2>>
+
+<style|<tuple|generic|chinese|table-captions-above|number-europe|preview-ref|framed-theorems>>
+
+<\body>
+  <doc-data|<doc-title|PL Resolution>>
+
+  <\table-of-contents|toc>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|1<space|2spc>Kinds of proof system><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-1><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Definition><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-2><vspace|0.5fn>
+
+    <with|par-left|1tab|2.1<space|2spc>Normal form<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-3>>
+
+    <with|par-left|1tab|2.2<space|2spc>Literal (单式/字段）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-4>>
+
+    <with|par-left|1tab|2.3<space|2spc>Clause(子式/子句)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-5>>
+
+    <with|par-left|1tab|2.4<space|2spc>CNF(合取范式) & DNF(析取范式)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-6>>
+
+    <with|par-left|1tab|2.5<space|2spc>Judgement of CNF or DNF<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-7>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Theorem><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-8><vspace|0.5fn>
+
+    <with|par-left|1tab|3.1<space|2spc>Convertable<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-9>>
+
+    <with|par-left|1tab|3.2<space|2spc>Completeness of the Normal Form<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-10>>
+
+    <with|par-left|1tab|3.3<space|2spc>Principal CNF/DNF 主合取/析取范式<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-11>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Resolution><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-12><vspace|0.5fn>
+
+    <with|par-left|1tab|4.1<space|2spc>A refutation (反驳) system.<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-13>>
+
+    <with|par-left|1tab|4.2<space|2spc>Inference Rules<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-14>>
+
+    <with|par-left|1tab|4.3<space|2spc>Deduction Preperation<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-15>>
+
+    <with|par-left|1tab|4.4<space|2spc>Deduction<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-16>>
+
+    <with|par-left|1tab|4.5<space|2spc>Example<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-17>>
+  </table-of-contents>
+
+  <section|Kinds of proof system>
+
+  <with|item-nr|1|<item>>Hilbert-style system (\<Sigma\> \<vdash\><math|<rsub|H>> A): many axioms and only one rule. The deduction is linear.
+
+  <item>Natural Deduction System (\<Sigma\> \<vdash\><math|<rsub|ND>> A): No axioms and many rules. The deductions are tree-like.
+
+  <item><with|font-series|bold|Resolution (\<Sigma\> \<vdash\><math|<rsub|Res>> A): used to prove contradictions.>
+
+  \;
+
+  <section|Definition>
+
+  <subsection|Normal form>
+
+  a standardized representation of logical formulas.
+
+  <subsection|Literal (单式/字段）>
+
+  <\definition>
+    \;
+
+    A literal is an atom (e.g.,p) or the negation of an atom (e.g.,<math|\<neg\>p>)
+  </definition>
+
+  <subsection|Clause(子式/子句)>
+
+  <\definition>
+    (析取子句 与 合取子句)
+
+    <with|font-series|bold|Disjunctive clause>: a disjunction of literals (literals connected by \<vee\> or none, 析取子式)\ 
+
+    有限个单式构成的析取式被称为“简单析取式”（析取子式）。
+
+    <with|font-series|bold|Conjunctive clause>: a conjunction of literals (literals connected by \<wedge\> or none, 合取子式)
+
+    有限个单式构成的合取式被称为“简单合取式”（合取子式）。
+
+    *一个字段既是析取子式又是合取子式。
+  </definition>
+
+  <subsection|CNF(合取范式) & DNF(析取范式)>
+
+  <\definition>
+    CNF
+
+    A formula is in conjunctive normal form (CNF) if it is <underline|a conjunction of disjunctive clauses.>
+
+    \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (<math|l<rsub|1,1>> \<vee\> ... \<vee\> <math|l<rsub|1,n<rsub|1>>> ) \<wedge\> ... \<wedge\> (<math|l<rsub|k,1>> \<vee\> ... \<vee\> <math|l<rsub|k,n<rsub|k>>> )
+
+    有限个<underline|析取子式>构成的<underline|合取式>成为“合取范式”。
+  </definition>
+
+  <\definition>
+    DNF
+
+    A formula is in disjunctive normal form (DNF) if it is <underline|a disjunction of conjunctive clauses>.\ 
+
+    \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (<math|l<rsub|1,1>> \<wedge\> ... \<wedge\> <math|l<rsub|1,n<rsub|1>>> ) \<vee\> ... \<vee\> (<math|l<rsub|k,1>> \<wedge\> ... \<wedge\> <math|l<rsub|k,n<rsub|k>>> )
+
+    有限个<underline|合取子式>构成的<underline|析取式>成为“析取范式”。
+  </definition>
+
+  <subsection|Judgement of CNF or DNF>
+
+  1.<math|\<neg\>p\<vee\><around|(|q\<wedge\>\<neg\>r|)>> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DNF
+
+  2.<math|\<neg\>p\<wedge\><around|(|q\<vee\>\<neg\>r|)>\<wedge\><around|(|q\<vee\>r|)>> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CNF
+
+  3.<math|<around|(|\<neg\>p\<wedge\>q|)>\<vee\>r\<vee\><around|(|q\<wedge\>\<neg\>r\<wedge\>s|)>> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DNF
+
+  4.<math|<around|(|<around|(|\<b-p\>\<vee\><around|(|\<neg\>\<b-q\>|)>|)>\<wedge\>\<b-r\>\<wedge\><around|(|<around|(|\<neg\>\<b-r\>|)>\<vee\>\<b-p\>\<vee\>\<b-q\>|)>|)>> \ \ \ \ \ \ \ \ CNF
+
+  5.<math|<around|(|p\<rightarrow\>q|)>> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Neither
+
+  6.<math|<around|(|\<neg\><around|(|<around|(|\<neg\>p|)>\<wedge\>q|)>|)>> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Neither
+
+  7.<math|<around|(|p\<vee\>q|)>\<wedge\><around|(|<around|(|p\<wedge\>r|)>\<vee\><around|(|q\<wedge\>s|)>|)>> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Neither
+
+  8.<math|\<neg\>p\<wedge\>q> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Either
+
+  9.<math|<around*|(||\<nobracket\>><around|(|\<neg\>r|)>\<vee\>p\<vee\>q)> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Either
+
+  10.p \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Either
+
+  <section|Theorem>
+
+  <subsection|Convertable>
+
+  <\theorem>
+    对偶可转换性
+
+    Let A be a formula in CNF and B be a formula in DNF. Then,\ 
+
+    \<neg\>A is <underline|<with|font-series|medium|logically equivalent>> to a formula in DNF and
+
+    \ \<neg\>B is <with|font-shape|right|<underline|logically equivalent>> to a formula in CNF.
+  </theorem>
+
+  <\proof>
+    \;
+
+    A=<math|<around*|(|p\<vee\>q|)>\<wedge\><around*|(|r\<vee\>s|)>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<neg\>A>|<cell|=>|<cell|\<neg\><around*|(|<around*|(|p\<vee\>q|)>\<wedge\><around*|(|r\<vee\>s|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<neg\><around*|(|p\<vee\>q|)>\<vee\>\<neg\><around*|(|r\<vee\>s|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<neg\>p\<wedge\>\<neg\>q|)>\<vee\><around*|(|\<neg\>r\<wedge\>\<neg\>s|)><space|1em>\<ldots\>DNF>>>>
+    </eqnarray*>
+
+    对于更多项也同样可用两次德摩根定律得到。
+
+    B=<math|<around*|(|p\<wedge\>q|)>\<vee\><around*|(|r\<wedge\>s|)>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<neg\>B>|<cell|=>|<cell|\<neg\><around*|(|<around*|(|p\<wedge\>q|)>\<vee\><around*|(|r\<wedge\>s|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<neg\><around*|(|p\<wedge\>q|)>\<wedge\>\<neg\><around*|(|r\<wedge\>s|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<neg\>p\<vee\>\<neg\>q|)>\<wedge\><around*|(|\<neg\>r\<vee\>\<neg\>s|)><space|1em>\<ldots\>CNF>>>>
+    </eqnarray*>
+
+    \;
+
+    对更多项也一样。
+
+    \;
+  </proof>
+
+  <subsection|Completeness of the Normal Form>
+
+  <\theorem>
+    范式存在性定理
+
+    Every formula A \<in\> Form(<math|\<cal*-L\><rsup|p>>) is logically equivalent to some formula in CNF and DNF.
+  </theorem>
+
+  任何合式公式都存在与之逻辑等价的范式。
+
+  <\render-proof|证明1>
+    通过<with|font-series|bold|等价变换>证明：我们只需要证明蕴含<math|\<rightarrow\>和等价\<leftrightarrow\>>都可以转换为范式即可。
+
+    <with|font-series|bold|第一步>移除<math|\<rightarrow\>>和<math|\<leftrightarrow\>>：
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|A\<rightarrow\>B>|<cell|\<equiv\>>|<cell|\<neg\>A\<vee\>B>>|<row|<cell|A\<leftrightarrow\>B>|<cell|\<equiv\>>|<cell|<around*|(|\<neg\>A\<vee\>B|)>\<wedge\><around*|(|A\<vee\>\<neg\>B|)><space|1em>相互蕴含>>|<row|<cell|A\<leftrightarrow\>B>|<cell|\<equiv\>>|<cell|<around*|(|A\<wedge\>B|)>\<vee\><around*|(|\<neg\>A\<wedge\>\<neg\>B|)><space|1em>同或关系>>>>
+    </eqnarray*>
+
+    <with|font-series|bold|第二步>消去外层的否定<math|\<neg\>>：
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<neg\>\<neg\>A>|<cell|\<equiv\>>|<cell|A>>|<row|<cell|\<neg\><around*|(|A<rsub|1>\<wedge\>\<ldots\>\<wedge\>A<rsub|n>|)>>|<cell|\<equiv\>>|<cell|<around*|(|\<neg\>A<rsub|1>\<vee\>\<cdots\>\<vee\>\<neg\>A<rsub|n>|)>>>|<row|<cell|\<neg\><around*|(|A<rsub|1>\<vee\>\<ldots\>\<vee\>A<rsub|n>|)>>|<cell|\<equiv\>>|<cell|<around*|(|\<neg\>A<rsub|1>\<wedge\>\<cdots\>\<wedge\>\<neg\>A<rsub|n>|)>>>>>
+    </eqnarray*>
+
+    直至把所有否定都移至单式。
+
+    现在我们得到的是一个否定全部集中在单式、用许多<math|\<vee\>和\<wedge\>>的树形结构组成的公式，称为“否定范式”。
+
+    <with|font-series|bold|第三步>运用分配率：
+
+    理论上，运用分配率可以定向把公式转化为“析取包裹合取”或“合取包裹析取”的结构：
+
+    例如以CNF为目标，如果遇到“析取包裹合取”的局部结构，如<math|A\<vee\><around*|(|B\<wedge\>C|)>>，就使用一次分配率翻转:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|A\<vee\><around*|(|B\<wedge\>C|)>>|<cell|\<equiv\>>|<cell|<around*|(|A\<vee\>B|)>\<wedge\><around*|(|A\<vee\>C|)>>>>>
+    </eqnarray*>
+
+    反复对所有这样的位置应用这条规则，<with|font|Noto CJK SC|font-series|medium|<strong|<with|font-series|medium|每应用一次就消灭一个<nbsp><code*|\<vee\>><nbsp>在上、<code*|\<wedge\>><nbsp>在下的局部模式>>>。因为公式的长度有限，这种模式的数量有限，最终必然达到一个状态：<with|font|Noto CJK SC|<strong|<with|font-family|rm|font-series|medium|没有任何<nbsp><code*|\<vee\>><nbsp>的辖域内还含有<nbsp><code*|\<wedge\>>>>。>
+
+    最后，我们把上、下的括号拆开，变成默认模式，公式便自然呈现出CNF的模式。
+
+    \;
+  </render-proof>
+
+  分配率演示：<math|t\<vee\><around*|(|<around*|(|p\<wedge\>q|)>\<vee\>r|)>>目标：CNF合取范式。
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|t\<vee\><around*|(|<around*|(|p\<wedge\>q|)>\<vee\>r|)>>|<cell|\<equiv\>>|<cell|t\<vee\><around*|(|<around*|(|p\<vee\>r|)>\<wedge\><around*|(|q\<vee\>r|)>|)><space|1em>\<ldots\>上移一层>>|<row|<cell|>|<cell|\<equiv\>>|<cell|<around*|(|t\<vee\><around*|(|p\<vee\>r|)>|)>\<wedge\><around*|(|t\<vee\><around*|(|q\<vee\>r|)>|)>\<ldots\>上移两层>>|<row|<cell|>|<cell|\<equiv\>>|<cell|<around*|(|t\<vee\>p\<vee\>r|)>\<wedge\><around*|(|t\<vee\>q\<vee\>r|)><space|1em>\<ldots\>拆除默认括号>>>>
+  </eqnarray*>
+
+  <subsection|Principal CNF/DNF 主合取/析取范式>
+
+  <\theorem>
+    \;
+
+    A formula B is called the <underline|principal CNF/DNF> (主合取/析取范式) of the formula A if:
+
+    \ \<bullet\> B is a CNF/DNF of A.
+
+    \ \<bullet\> Each clause in B contains all propositional variables in A exactly once, and no two clauses are the same.
+
+    n个<underline|命题变项>构成的范式中，所有<underline|简单子式都是极小项>，则称该范式为主析取/合取范式。
+  </theorem>
+
+  *主合取/析取范式存在且唯一。
+
+  主合取/析取范式来源于范式存在定理的另一种证明——真值表构造法。
+
+  指定一个用于演示的公式<math|\<varphi\>>:
+
+  <\align>
+    <tformat|<table|<row|<cell|<tabular*|<tformat|<cwith|1|-1|1|-1|cell-tborder|1ln>|<cwith|1|-1|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|-1|cell-lborder|1ln>|<cwith|1|-1|1|-1|cell-rborder|1ln>|<table|<row|<cell|>|<cell|p<rsub|1>>|<cell|p<rsub|2>>|<cell|p<rsub|3>>|<cell|\<varphi\>>>|<row|<cell|1>|<cell|0>|<cell|0>|<cell|0>|<cell|1>>|<row|<cell|2>|<cell|0>|<cell|0>|<cell|1>|<cell|1>>|<row|<cell|3>|<cell|0>|<cell|1>|<cell|0>|<cell|1>>|<row|<cell|4>|<cell|0>|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|5>|<cell|1>|<cell|0>|<cell|0>|<cell|1>>|<row|<cell|6>|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|7>|<cell|1>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|8>|<cell|1>|<cell|1>|<cell|1>|<cell|0>>>>>>|<cell|>>>>
+  </align>
+
+  <\render-proof|证明2>
+    <with|font-series|bold|真值表构造法:>
+
+    设公式<math|\<varphi\>含有n个不同的原子命题p<rsub|1>,p<rsub|2>,\<ldots\>,p<rsub|n>>。
+
+    <with|font-series|bold|1.构造等价的DNF>
+
+    画出<math|\<varphi\>>的真值表，共有<math|2<rsup|n>>行。
+
+    找出所有使<math|\<varphi\>>为真的行（1,2,3,4,5），构造一个合取子式：
+
+    <\itemize>
+      <item>若在该行中<nbsp><math|p<rsub|i>><nbsp>被指派为真，则取文字<nbsp><math|p<rsub|i>>；
+
+      <item>若在该行中<nbsp><math|p<rsub|i>><nbsp>被指派为假，则取文字<nbsp><math|\<neg\>p<rsub|i>>。
+
+      <item>将这<nbsp><math|n><nbsp>个文字用<nbsp><math|\<wedge\>><nbsp>连接，得到一个<strong|极小合取项>（minterm）。
+    </itemize>
+
+    将所有极小合取项用<nbsp><math|\<vee\>><nbsp>连接，形成公式<nbsp><math|\<psi\><rsub|<with|mode|text|DNF>>>。
+
+    <\equation*>
+      \<varphi\>\<equiv\><around*|(|\<neg\>p<rsub|1>\<wedge\>\<neg\>p<rsub|2>\<wedge\>\<neg\>p<rsub|3>|)>\<vee\>\<cdots\>\<vee\><around*|(|p<rsub|1>\<wedge\>\<neg\>p<rsub|2>\<wedge\>\<neg\>p<rsub|3>|)>
+    </equation*>
+
+    这样一来，当赋值遇到1,2,3,4,5行时，某个子式匹配出1（全1出1），整体就会出1（有1出1），当不在1-5中时所有子式都出0，整体出0。
+
+    <with|font-series|bold|2.构造等价的CNF>
+
+    画出<math|\<varphi\>>的真值表，共有<math|2<rsup|n>>行。
+
+    找出所有使<math|\<varphi\>>为假的行（6,7,8），构造一个析取子式：
+
+    <\itemize>
+      <item>若在该行中<nbsp><math|p<rsub|i>><nbsp>被指派为真，则取文字<nbsp><math|\<neg\>p<rsub|i>>；
+
+      <item>若在该行中<nbsp><math|p<rsub|i>><nbsp>被指派为假，则取文字<nbsp><math|p<rsub|i>>。
+
+      <item>将这<nbsp><math|n><nbsp>个文字用<nbsp><math|\<vee\>><math|><nbsp>连接，得到一个<strong|极小析取项>（maxterm）。
+    </itemize>
+
+    将所有极小合取项用<nbsp><math|\<wedge\>><nbsp>连接，形成公式<nbsp><math|\<psi\><rsub|<with|mode|text|CNF>>>。
+
+    <\align>
+      <tformat|<table|<row|<cell|\<varphi\>\<equiv\><around*|(|\<neg\>p<rsub|1>\<vee\>p<rsub|2>\<vee\>\<neg\>p<rsub|3>|)>\<wedge\>\<cdots\>\<wedge\><around*|(|\<neg\>p<rsub|1>\<vee\>\<neg\>p<rsub|2>\<vee\>\<neg\>p<rsub|3>|)>>|<cell|>>>>
+    </align>
+
+    这时，当赋值遇到6,7,8行时，某个子式匹配出0（全0出0），整体就出0（有0出0），当不在6-8中时所有子式都出1，整体出1。
+
+    对于任意命题公式，都可以通过<strong|真值表构造法>（极小项 / 极大项）得到与其逻辑等价的 CNF 和 DNF，这就完成了范式存在定理的证明。
+
+    \;
+  </render-proof>
+
+  总体而言，<with|font-series|bold|子式的功能类似不同锁孔，各行的真值指派就像钥匙，每一次当目标的钥匙出现就必然有一个锁孔能被打开，而只要有一个锁被打开就能导向最终的结果>（0或1）。
+
+  \;
+
+  \;
+
+  <section|Resolution>
+
+  <subsection|A refutation (反驳) system.>
+
+  <subsection|Inference Rules>
+
+  <\theorem*>
+    Inference Rule
+
+    for any proposition variable p and formulas \<alpha\> and \<beta\>:
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|<around*|(|\<alpha\>\<vee\>p|)><space|1em><around*|(|<around*|(|\<neg\>p|)>\<vee\>\<beta\>|)>|<around*|(|\<alpha\>\<vee\>\<beta\>|)>>>|<cell|>>>>
+    </align>
+  </theorem*>
+
+  In a Resolution proof, we consider only CNF formulas. Each step of the proof produces one clause (Resolvent, 消解子句) from two previous clauses by applying the resolution rule.
+
+  <\corollary>
+    Special case: Unit resolution:
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|<around*|(|\<alpha\>\<vee\>p|)><space|1em><around*|(|\<neg\>p|)>|\<alpha\>>>|<cell|>>>>
+    </align>
+  </corollary>
+
+  <\corollary>
+    Special case: Contradiction:
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|p<space|1em><around*|(|\<neg\>p|)>|\<perp\>>>|<cell|>>>>
+    </align>
+  </corollary>
+
+  <subsection|Deduction Preperation>
+
+  <\enumerate-numeric>
+    <item>Resolution only yields contradictions. Hence, rather than proving \<Sigma\> \<vdash\>Res \<varphi\>, we prove \<Sigma\> \<cup\> {\<neg\>\<varphi\>} \<vdash\>Res \<bot\> instead.
+
+    <item>The resolution rule only applies to disjunctions (\<vee\>). Hence, we first convert each formula in \<Sigma\> and \<neg\>\<varphi\> to CNF（合取范式）.
+
+    <item>Split the CNF formulas at the \<wedge\>, yielding a set of disjunctive clauses.
+  </enumerate-numeric>
+
+  <\itemize>
+    <item>set notations for CNF.
+  </itemize>
+
+  <\align>
+    <tformat|<table|<row|<cell|<around*|(|p\<vee\>q|)>\<wedge\><around*|(|\<neg\>p\<vee\>q|)>\<wedge\>s>|<cell|>>>>
+  </align>
+
+  <\align>
+    <tformat|<table|<row|<cell|\<Leftrightarrow\>>|<cell|>>>>
+  </align>
+
+  <\align>
+    <tformat|<table|<row|<cell|<around*|{|p\<vee\>q|}>,<around*|{|\<neg\>p\<vee\>q|}>,<around*|{|s|}>>|<cell|>>>>
+  </align>
+
+  <\itemize>
+    <item><math|\<perp\>> as a clause
+
+    In CNF, we treat \<bot\> as a clause containing no literal, i.e., the empty set \<emptyset\>. Since it contains no true literal, it is false
+  </itemize>
+
+  <subsection|Deduction>
+
+  From the resulting set of clauses, keep applying the resolution inference rule until either:\ 
+
+  — We have the empty clause \<bot\>. In this case, we proved that \<Sigma\> \<vdash\>Res \<varphi\>\ 
+
+  — The rule can no longer be applied to give a new formula. In this case, \<varphi\> cannot be proven from \<Sigma\>.
+
+  (如何判定没法再生成公式？这是一个问题。)
+
+  <subsection|Example>
+
+  <\problem>
+    Prove that {p, q} \<vdash\>res (p \<wedge\> q)
+  </problem>
+
+  Step 1: Negating the conclusion and move it to the premise.
+
+  <\equation*>
+    <around*|{|p,q,\<neg\><around*|(|p\<wedge\>q|)>|}>
+  </equation*>
+
+  Step 2: Converting all premises to CNF
+
+  <\equation*>
+    <around*|{|p,q,<around*|(|\<neg\>p\<vee\>\<neg\>q|)>|}>
+  </equation*>
+
+  Step 3: Split CNF at the \<wedge\>s, resulting a set-notation for premises.
+
+  <\equation*>
+    <around*|{|p|}>,<around*|{|q|}>,<around*|{|\<neg\>p\<vee\>\<neg\>q|}>
+  </equation*>
+
+  All the 3 sets are our primises.
+
+  Step 4: Keep applying the resolution inference rule, until we get a contradiction.
+
+  <\align>
+    <tformat|<table|<row|<cell|1.>|<cell|<around*|{|p|}>>>|<row|<cell|2.>|<cell|<around*|{|q|}>>>|<row|<cell|3.>|<cell|<around*|{|\<neg\>p\<vee\>\<neg\>q|}>>>|<row|<cell|4.>|<cell|<around*|{|\<neg\>q|}><space|3em>1,3>>|<row|<cell|5.>|<cell|\<perp\><space|4em>2,4>>>>
+  </align>
+
+  <\problem>
+    Prove that {(p \<rightarrow\> q),(q \<rightarrow\> r)} \<vdash\>res (p \<rightarrow\> r)
+  </problem>
+
+  <\align>
+    <tformat|<table|<row|<cell|<around*|{|<around*|(|p\<rightarrow\>q|)>,<around*|(|q\<rightarrow\>r|)>,\<neg\><around*|(|p\<rightarrow\>r|)>|}>>|<cell|>>>>
+  </align>
+
+  <\equation*>
+    <around*|{|\<neg\>p\<vee\>q,\<neg\>q\<vee\>r,p\<wedge\>\<neg\>r|}>
+  </equation*>
+
+  <\equation*>
+    <around*|{|\<neg\>p\<vee\>q|}>,<around*|{|\<neg\>q\<vee\>r|}>,<around*|{|p|}>,<around*|{|\<neg\>r|}>
+  </equation*>
+
+  Then we start out deduction.
+
+  <\align>
+    <tformat|<table|<row|<cell|1.>|<cell|<around*|{|\<neg\>p\<vee\>q|}><space|1em>Premise>>|<row|<cell|2.>|<cell|<around*|{|\<neg\>q\<vee\>r|}><space|1em>Premise>>|<row|<cell|3.>|<cell|<around*|{|p|}><space|3em>Premise>>|<row|<cell|4.>|<cell|<around*|{|\<neg\>r|}><space|3em>Premise>>|<row|<cell|5.>|<cell|q<space|4em>1,3>>|<row|<cell|6.>|<cell|<around*|{|r|}><space|3em>2,5>>|<row|<cell|7.>|<cell|\<perp\><space|4em>4,6>>>>
+  </align>
+
+  \;
+</body>
+
+<\initial>
+  <\collection>
+    <associate|page-medium|paper>
+    <associate|page-screen-margin|false>
+  </collection>
+</initial>
+
+<\references>
+  <\collection>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|3.2|3>>
+    <associate|auto-11|<tuple|3.3|4>>
+    <associate|auto-12|<tuple|4|5>>
+    <associate|auto-13|<tuple|4.1|5>>
+    <associate|auto-14|<tuple|4.2|5>>
+    <associate|auto-15|<tuple|4.3|6>>
+    <associate|auto-16|<tuple|4.4|6>>
+    <associate|auto-17|<tuple|4.5|6>>
+    <associate|auto-2|<tuple|2|1>>
+    <associate|auto-3|<tuple|2.1|1>>
+    <associate|auto-4|<tuple|2.2|1>>
+    <associate|auto-5|<tuple|2.3|1>>
+    <associate|auto-6|<tuple|2.4|2>>
+    <associate|auto-7|<tuple|2.5|2>>
+    <associate|auto-8|<tuple|3|2>>
+    <associate|auto-9|<tuple|3.1|2>>
+  </collection>
+</references>
+
+<\auxiliary>
+  <\collection>
+    <\associate|toc>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Kinds of proof system><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-1><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Definition><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-2><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Normal form<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Literal (单式/字段）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-4>>
+
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Clause(子式/子句)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-5>>
+
+      <with|par-left|<quote|1tab>|2.4<space|2spc>CNF(合取范式) & DNF(析取范式)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|1tab>|2.5<space|2spc>Judgement of CNF or DNF<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-7>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Theorem><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-8><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|3.1<space|2spc>Convertable<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|1tab>|3.2<space|2spc>Completeness of the Normal Form<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-10>>
+
+      <with|par-left|<quote|1tab>|3.3<space|2spc>Principal CNF/DNF 主合取/析取范式<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-11>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Resolution><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-12><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|4.1<space|2spc>A refutation (反驳) system.<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-13>>
+
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Inference Rules<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-14>>
+
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Deduction Preperation<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-15>>
+
+      <with|par-left|<quote|1tab>|4.4<space|2spc>Deduction<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-16>>
+
+      <with|par-left|<quote|1tab>|4.5<space|2spc>Example<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-17>>
+    </associate>
+  </collection>
+</auxiliary>
