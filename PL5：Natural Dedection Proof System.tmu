@@ -1,0 +1,461 @@
+<TMU|<tuple|1.1.0|2026.1.2>>
+
+<style|<tuple|generic|chinese|table-captions-above|number-europe|preview-ref>>
+
+<\body>
+  <\hide-preamble>
+    \;
+
+    <assign||<macro|body|<tformat|<cwith|1|-1|1|-1|cell-halign|c>|<cwith|1|-1|1|-1|cell-halign|l>||<cwith|5|5|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|1|-1|cell-row-span|1>|<cwith|1|-1|1|-1|cell-col-span|2>|<twith|table-hyphen|y>|<arg|body>>>>
+  </hide-preamble>
+
+  <doc-data|<doc-title|Natural Deduction>>
+
+  <\table-of-contents|toc>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|1<space|2spc>Introduction><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-1><vspace|0.5fn>
+
+    <with|par-left|1tab|1.1<space|2spc>3 proof systems<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-2>>
+
+    <with|par-left|1tab|1.2<space|2spc>Alphabet of ND<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-3>>
+
+    <with|par-left|1tab|1.3<space|2spc>Formula of ND<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-4>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Inference 推理><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-5><vspace|0.5fn>
+
+    <with|par-left|1tab|2.1<space|2spc>Reflexivity(Premise)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-6>>
+
+    <with|par-left|1tab|2.2<space|2spc>Inference Rules for Conjunction <with|mode|math|\<wedge\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-7>>
+
+    <with|par-left|1tab|2.3<space|2spc>Inference Rules for Implication <with|mode|math|\<rightarrow\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-8>>
+
+    <with|par-left|1tab|2.4<space|2spc>Inference Rules for Disjunction <with|mode|math|\<vee\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-9>>
+
+    <with|par-left|1tab|2.5<space|2spc>Inference Rules for Contradiction <with|mode|math|\<perp\>> and Negation <with|mode|math|\<neg\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-10>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Derived Rules><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-11><vspace|0.5fn>
+
+    <with|par-left|1tab|3.1<space|2spc>Definition<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-12>>
+
+    <with|par-left|1tab|3.2<space|2spc>MT 否定后件（归谬）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-13>>
+
+    <with|par-left|1tab|3.3<space|2spc>Double Negation Introduction<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-14>>
+
+    <with|par-left|1tab|3.4<space|2spc>Proof by contradiction<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-15>>
+
+    <with|par-left|1tab|3.5<space|2spc>Law of Excluded Middle<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-16>>
+  </table-of-contents>
+
+  <section|Introduction>
+
+  <subsection|3 proof systems>
+
+  \<bullet\> Hilbert-style system (\<Sigma\> \<vdash\>H A): many axioms and only one rule. The deduction is linear.\ 
+
+  \<bullet\> <with|font-series|bold|Natural Deduction System (\<Sigma\> \<vdash\>ND A): Few axioms (even none) and many rules. The deductions are tree-like.>
+
+  \<bullet\> Resolution (\<Sigma\> \<vdash\>Res A): used to prove contradictions.
+
+  <subsection|Alphabet of ND>
+
+  <\align>
+    <tformat|<table|<row|<cell|\<Sigma\>>|<cell|=<around*|{|<around*|(|,|)>,\<neg\>,\<wedge\>,\<vee\>,\<leftrightarrow\>,\<rightarrow\>,p,q,r,\<ldots\>|}>>>>>
+  </align>
+
+  <subsection|Formula of ND>
+
+  1. Atoms p, q, r, ... are formulas.
+
+  2. If A, B are formulas, then (\<neg\>A),(A\<wedge\>B),(A\<vee\>B),(A \<rightarrow\> B),(A \<leftrightarrow\> B) are also formulas.\ 
+
+  3. Only expressions of \<Sigma\> that are generated by 1 and 2 are formulas.
+
+  <section|Inference 推理>
+
+  <subsection|Reflexivity(Premise) \ 自反性>
+
+  <\theorem>
+    Reflexivity\ 
+
+    <\align>
+      <tformat|<table|<row|<cell|\<Sigma\>\<cup\><around*|{|\<alpha\>|}>>|<cell|\<vdash\>\<alpha\><space|1em>Premise>>>>
+    </align>
+  </theorem>
+
+  用于重述一个命题。
+
+  <\example>
+    \;
+
+    <\align>
+      <tformat|<table|<row|<cell|1.>|<cell|p>>|<row|<cell|\<vdots\> >|<cell|\<vdots\>>>|<row|<cell|5.>|<cell|p<space|2em>Reflexivity:1>>>>
+    </align>
+  </example>
+
+  \;
+
+  <subsection|Inference Rules for Conjunction <math|\<wedge\>>>
+
+  <\theorem>
+    \;
+
+    <math|\<wedge\>-introduction> 析取引入
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<alpha\><space|1em>\<beta\>|<around*|(|\<alpha\>\<wedge\>\<beta\>|)>>>|<cell|>>>>
+    </align>
+
+    <math|\<wedge\>-elimination> 析取消去
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|<around*|(|\<alpha\>\<wedge\>\<beta\>|)>|\<alpha\>><space|1em>>|<cell|and<space|1em><frac|<around*|(|\<alpha\>\<wedge\>\<beta\>|)>|\<beta\>> >>>>
+    </align>
+
+    \ \ \ \ \ \ \ 
+  </theorem>
+
+  <\example>
+    {(p \<wedge\> q)} \<vdash\>ND (q \<wedge\> p)
+
+    <\proof>
+      \;
+
+      <\align>
+        <tformat|<table|<row|<cell|1.>|<cell|<around*|(|p\<wedge\>q|)><space|2em>Premise>>|<row|<cell|2.>|<cell|q<space|4em>\<wedge\>e:1>>|<row|<cell|3.>|<cell|p<space|4em>\<wedge\>e:1>>|<row|<cell|4.>|<cell|<around*|(|q\<wedge\>p|)><space|2em>\<wedge\>i:2,3>>>>
+      </align>
+
+      \;
+    </proof>
+  </example>
+
+  <subsection|Inference Rules for Implication <math|\<rightarrow\>>>
+
+  <\theorem>
+    \;
+
+    <math|\<rightarrow\>>-introduction 蕴含引入
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|<tabular*|<tformat|<cwith|1|1|1|1|cell-tborder|1ln>|<cwith|3|3|1|1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<table|<row|<cell|a>>|<row|<cell|\<vdots\>>>|<row|<cell|\<beta\>>>>>>|<around*|(|\<alpha\>\<rightarrow\>\<beta\>|)>>>|<cell|>>|<row|<cell|//框内表示子证明>|<cell|,假设\<alpha\>得到\<beta\>>>>>
+    </align>
+
+    <math|\<rightarrow\>>-elimination 蕴含消去
+
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|<frac|<around*|(|\<alpha\>\<rightarrow\>\<beta\>|)><space|1em>a|\<beta\> >>>>>
+    </align>
+  </theorem>
+
+  <\example>
+    {(p \<rightarrow\> q),(q \<rightarrow\> r)} \<vdash\>ND (p \<rightarrow\> r)
+
+    <\proof>
+      \;
+
+      <\align>
+        <tformat|<table|<row|<cell|1 . >|<cell|<around*|(|p\<rightarrow\>q|)> <space|1em>Premise>>|<row|<cell|2 . >|<cell|<around*|(|q\<rightarrow\>r|)> <space|1em>Premise>>|<row|<cell|<tabular*|<tformat|<table|<row|<cell|3.>>|<row|<cell|4.>>|<row|<cell|5.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|3|3|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|1|-1|cell-halign|l>|<table|<row|<cell|p<space|3em>>|<cell|Assumption>>|<row|<cell|q>|<cell|\<rightarrow\>e:3,1>>|<row|<cell|r>|<cell|\<rightarrow\>e:4,2>>>>>>>|<row|<cell|6 . >|<cell|<around*|(|p\<rightarrow\>r|)><space|1em>\<rightarrow\>i:3-5>>>>
+      </align>
+
+      \;
+    </proof>
+  </example>
+
+  <\example>
+    p \<rightarrow\> (q \<rightarrow\> r) \<vdash\> q \<rightarrow\> (p \<rightarrow\> r)
+
+    <\proof>
+      \;
+
+      <\align>
+        <tformat|<table|<row|<cell|1 . \ *\<space\>**\<space\>*\<space\>*>|<cell|p\<rightarrow\><around*|(|q\<rightarrow\>r|)><space|1em>Premise>>|<row|<cell|<tabular*|<tformat|<table|<row|<cell|2.>>|<row|<cell|3.>>|<row|<cell|4.>>|<row|<cell|5.>>|<row|<cell|6.>>>>>>|<cell|<block|<tformat|<cwith|2|2|1|1|cell-tborder|0ln>|<cwith|1|1|1|1|cell-bborder|0ln>|<cwith|2|2|1|1|cell-bborder|0ln>|<cwith|3|3|1|1|cell-tborder|0ln>|<cwith|2|2|1|1|cell-lborder|1ln>|<cwith|2|2|1|1|cell-rborder|1ln>|<table|<row|<cell|q<space|3em>Assumption>>|<row|<cell|<block|<tformat|<cwith|2|2|1|1|cell-tborder|0ln>|<cwith|1|1|1|1|cell-bborder|0ln>|<cwith|2|2|1|1|cell-bborder|0ln>|<cwith|3|3|1|1|cell-tborder|0ln>|<cwith|2|2|1|1|cell-lborder|1ln>|<cwith|2|2|1|1|cell-rborder|1ln>|<table|<row|<cell|p<space|3em>Assumption>>|<row|<cell|q\<rightarrow\>r<space|1em>\<rightarrow\>e:1,3>>|<row|<cell|r<space|3em>\<rightarrow\>e:2,4>>>>>>>|<row|<cell|p\<rightarrow\>r<space|1em>\<rightarrow\>i:3<textendash>5>>>>>>>|<row|<cell|7. >|<cell|q\<rightarrow\><around*|(|p\<rightarrow\>r|)><space|1em>\<rightarrow\>i:3<textendash>5>>>>
+      </align>
+
+      \;
+    </proof>
+  </example>
+
+  <subsection|Inference Rules for Disjunction <math|\<vee\>>>
+
+  <\theorem>
+    \;
+
+    <math|\<vee\>-introduction> 合取引入
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<alpha\>|\<alpha\>\<vee\>\<beta\>><space|1em>>|<cell|and<space|1em><frac|\<alpha\>|\<beta\>\<vee\>\<alpha\>>>>>>
+    </align>
+
+    <math|\<vee\>-elimination> 合取消去
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|<around*|(|\<alpha\><rsub|1>\<vee\>\<alpha\><rsub|2>|)><space|1em><tabular*|<tformat|<cwith|1|-1|1|1|cell-tborder|0ln>|<cwith|1|-1|1|1|cell-bborder|0ln>|<cwith|3|3|1|1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<cwith|1|1|1|1|cell-tborder|1ln>|<cwith|1|1|1|1|cell-bborder|0ln>|<cwith|2|2|1|1|cell-tborder|0ln>|<cwith|1|1|1|1|cell-lborder|1ln>|<cwith|1|1|1|1|cell-rborder|1ln>|<table|<row|<cell|\<alpha\><rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|\<beta\>>>>>><space|1em><tabular*|<tformat|<cwith|1|1|1|1|cell-tborder|1ln>|<cwith|3|3|1|1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<table|<row|<cell|\<alpha\><rsub|2>>>|<row|<cell|\<vdots\>>>|<row|<cell|\<beta\>>>>>>|\<beta\>>>|<cell|>>>>
+    </align>
+  </theorem>
+
+  <\example>
+    {(p \<vee\> q)} \<vdash\>ND ((p \<rightarrow\> q) \<vee\> (q \<rightarrow\> p))
+
+    <\proof>
+      \;
+
+      <\align>
+        <tformat|<table|<row|<cell|1 . >|<cell|<around*|(|p\<vee\>q|)> \ <space|6em>Premise>>|<row|<cell|<tabular*|<tformat|<table|<row|<cell|2.>>|<row|<cell|3.>>|<row|<cell|4.>>|<row|<cell|5.>>|<row|<cell|6.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|4|4|cell-rborder|1ln>|<cwith|1|-1|1|-1|cell-row-span|1>|<cwith|1|-1|1|-1|cell-col-span|3>|<cwith|1|-1|1|-1|cell-halign|l>|<cwith|4|4|1|4|cell-bborder|1ln>|<cwith|4|4|1|1|cell-lborder|1ln>|<cwith|4|4|4|4|cell-rborder|1ln>|<cwith|4|4|1|4|cell-row-span|1>|<cwith|4|4|1|4|cell-col-span|3>|<cwith|4|4|1|4|cell-halign|l>|<table|<row|<cell|p>|<cell|>|<cell|>|<cell|Assumption>>|<row|<cell|<subtable|<tformat|<cwith|1|1|2|2|cell-tborder|1ln>|<cwith|2|2|2|2|cell-bborder|1ln>|<cwith|1|-1|2|2|cell-lborder|1ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<cwith|1|-1|2|2|cell-rborder|0ln>|<cwith|1|-1|1|-1|cell-halign|l>|<cwith|1|-1|1|-1|cell-height|1>|<cwith|1|-1|1|-1|cell-vmode|max>|<twith|table-width|0.01par>|<twith|table-hmode|max>|<table|<row|<cell|>|<cell|q<space|7em>>>|<row|<cell|>|<cell|p>>>>>>|<cell|>|<cell|>|<cell|<subtable|<tformat|<cwith|1|1|1|1|cell-tborder|1ln>|<cwith|2|2|1|1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|0ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<cwith|1|-1|2|2|cell-lborder|1ln>|<table|<row|<cell|Assumption>|<cell|>>|<row|<cell|Reflexivity:2>|<cell|>>>>>>>|<row|<cell|<around*|(|p\<rightarrow\>q|)>>|<cell|>|<cell|>|<cell|\<rightarrow\>i:3<textendash>4>>|<row|<cell|<around*|(|<around*|(|p\<rightarrow\>q|)>\<vee\><around*|(|q\<rightarrow\>p|)>|)>>|<cell|>|<cell|>|<cell|\<vee\>i:5>>>>>>>|<row|<cell|<tabular*|<tformat|<table|<row|<cell|7.>>|<row|<cell|8.>>|<row|<cell|9.>>|<row|<cell|10.>>|<row|<cell|11.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|4|4|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|1|-1|cell-halign|l>|<table|<row|<cell|q>|<cell|Assumption>>|<row|<cell|<subtable|<tformat|<cwith|1|1|2|2|cell-tborder|1ln>|<cwith|2|2|2|2|cell-bborder|1ln>|<cwith|1|-1|2|2|cell-lborder|1ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<cwith|1|-1|2|2|cell-rborder|0ln>|<table|<row|<cell|>|<cell|p>>|<row|<cell|>|<cell|q<space|7em>>>>>>>|<cell|<subtable|<tformat|<cwith|1|1|1|1|cell-tborder|1ln>|<cwith|2|2|1|1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|0ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<cwith|1|-1|2|2|cell-lborder|1ln>|<table|<row|<cell|Assumption>|<cell|>>|<row|<cell|Reflexivity:7>|<cell|>>>>>>>|<row|<cell|<around*|(|p\<rightarrow\>q|)>>|<cell|\<rightarrow\>i:8<textendash>9>>|<row|<cell|<around*|(|<around*|(|p\<rightarrow\>q|)>\<vee\><around*|(|q\<rightarrow\>p|)>|)>>|<cell|\<vee\>i:10>>>>>>>|<row|<cell|12 . >|<cell|<around*|(|<around*|(|p\<rightarrow\>q|)>\<vee\><around*|(|q\<rightarrow\>p|)>|)><space|1em>\<vee\>e:1,2<textendash>6,7<textendash>11>>>>
+      </align>
+
+      \;
+    </proof>
+  </example>
+
+  证明的核心思想跟希尔伯特系统中的Axiom1:蕴含覆盖律相同。
+
+  <subsection|Inference Rules for Contradiction <math|\<perp\>> and Negation <math|\<neg\>> >
+
+  <\theorem>
+    \;
+
+    <math|\<neg\>-introduction> 否定引入
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|<tabular*|<tformat|<cwith|1|1|1|1|cell-tborder|1ln>|<cwith|3|3|1|1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<table|<row|<cell|\<alpha\>>>|<row|<cell|\<vdots\>>>|<row|<cell|\<perp\>>>>>>|<around*|(|\<neg\>\<alpha\>|)>>>|<cell|>>>>
+    </align>
+
+    //这之所以不叫矛盾消去，是因为矛盾消去还能有更大的威力（矛盾生万物）。
+
+    <math|\<perp\>-introduction >矛盾引入 & <math|\<neg\>-elimination> 否定消去
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<alpha\><space|1em><around*|(|\<neg\>\<alpha\>|)>|\<perp\>>>|<cell|>>>>
+    </align>
+
+    //肯定否定，引入矛盾；引入矛盾，否定消去。
+
+    <math|\<perp\>-elimination> 矛盾消去
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<perp\>|\<alpha\>>>|<cell|>>>>
+    </align>
+
+    \ \ <math|//类似希尔伯特系统中的爆炸律>
+
+    <math|\<neg\>\<neg\>-elimination> (双重)否定消去
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<neg\>\<neg\>\<alpha\>|\<alpha\>>>|<cell|>>>>
+    </align>
+  </theorem>
+
+  <\example>
+    <math|<around*|{|\<alpha\>\<rightarrowlim\>\<neg\>\<alpha\>|}>\<vdash\><rsub|ND><around*|(|\<neg\>\<alpha\>|)>>
+
+    <\proof>
+      \;
+
+      <\align>
+        <tformat|<table|<row|<cell|1 . >|<cell|<around*|(|\<alpha\>\<rightarrow\><around*|(|\<neg\>\<alpha\>|)>|)> <space|1em>Premise>>|<row|<cell|<tabular*|<tformat|<table|<row|<cell|2.>>|<row|<cell|3.>>|<row|<cell|4.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|3|3|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|1|-1|cell-halign|l>|<table|<row|<cell|\<alpha\>>|<cell|Assumption>>|<row|<cell|<around*|(|\<neg\>\<alpha\>|)><space|3em>>|<cell|\<rightarrow\>e:2,1>>|<row|<cell|\<perp\>>|<cell|\<neg\>e:2,3>>>>>>>|<row|<cell|5 . >|<cell|\<neg\>\<alpha\><space|5em>\<neg\>e:2<textendash>4>>>>
+      </align>
+
+      \;
+    </proof>
+  </example>
+
+  <\example>
+    {A \<vee\> B, \<neg\>A} <math|\<perp\><rsub|ND>> B
+
+    <\proof>
+      利用合取消除律
+
+      <\align>
+        <tformat|<table|<row|<cell|1 . \ >|<cell|<around*|(|A\<vee\>B|)><space|2em>Premise>>|<row|<cell|2 . \ >|<cell|\<neg\>A<space|4em>Premise>>|<row|<cell|<tabular*|<tformat|<table|<row|<cell|3.>>|<row|<cell|4.>>|<row|<cell|5.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|1|1|2|cell-tborder|1ln>|<cwith|1|2|1|1|cell-lborder|1ln>|<cwith|1|2|2|2|cell-rborder|1ln>|<cwith|1|-1|1|-1|cell-halign|l>|<cwith|3|3|1|-1|cell-tborder|0ln>|<cwith|2|2|1|-1|cell-bborder|0ln>|<cwith|3|3|1|-1|cell-bborder|1ln>|<cwith|3|3|1|1|cell-lborder|1ln>|<cwith|3|3|2|2|cell-rborder|1ln>|<table|<row|<cell|A<space|4em>>|<cell|Assumption >>|<row|<cell|\<perp\>>|<cell|\<neg\>e:2,3 >>|<row|<cell|B>|<cell|\<perp\>e:5>>>>>>>|<row|<cell|<tabular*|<tformat|<table|<row|<cell|6.>>|<row|<cell|7.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|2|2|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|1|-1|cell-halign|l>|<table|<row|<cell|B<space|3em><space|1em>>|<cell|Assumption >>|<row|<cell|B>|<cell|reflexivity:6>>>>>>>|<row|<cell|8 . \ >|<cell|B<space|5em>\<vee\>e:1,3<textendash>5,6<textendash>7>>>>
+      </align>
+
+      \;
+    </proof>
+  </example>
+
+  <section|Derived Rules>
+
+  <subsection|Definition>
+
+  Whenever we have a proof of the form \<Sigma\> \<vdash\>ND \<alpha\>, we can consider it as a derived rule:
+
+  <\align>
+    <tformat|<table|<row|<cell|<frac|\<Sigma\>|\<alpha\>>>|<cell|>>>>
+  </align>
+
+  \ If we use this in a proof, it can be replaced by the original proof of \<Sigma\> \<vdash\>ND \<alpha\>. The result is a proof using only the basic rules.
+
+  Using derived rules does not expand the things that can be proved. But they can make it easier to find a proof.
+
+  <subsection|MT 否定后件（归谬）>
+
+  <\theorem>
+    Modus tollens(MT,否定后件)
+
+    <\align>
+      <tformat|<table|<row|<cell|<around*|{|<around*|(|p\<rightarrow\>q|)>,<around*|(|\<neg\>q|)>|}>>|<cell|\<vdash\><rsub|ND ><around*|(|\<neg\>p|)>>>>>
+    </align>
+  </theorem>
+
+  <\proof>
+    \;
+
+    <\align>
+      <tformat|<table|<row|<cell|1 . >|<cell|<around*|(|p\<rightarrow\>q|)><space|2em>Premise>>|<row|<cell|2 . >|<cell|\<neg\>p<space|4em>Premise>>|<row|<cell|<tabular*|<tformat|<table|<row|<cell|3.>>|<row|<cell|4.>>|<row|<cell|5.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|3|3|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|1|-1|cell-halign|l>|<table|<row|<cell|p<space|4em>>|<cell|Assumption>>|<row|<cell|q>|<cell|\<rightarrow\>e:1,3>>|<row|<cell|\<perp\>>|<cell|\<perp\>i:2,4>>>>>>>|<row|<cell|6 . >|<cell|<around*|(|\<neg\>p|)><space|3em>\<neg\>i:3<textendash>5>>>>
+    </align>
+
+    \;
+  </proof>
+
+  Modus tollens rule can be used as a derived rule.
+
+  <\align>
+    <tformat|<table|<row|<cell|<frac|<around*|(|\<alpha\>\<rightarrow\>\<beta\>|)><space|1em>\<neg\>\<beta\>|\<neg\>\<alpha\>>>|<cell|\<space\><space|1em>MT>>>>
+  </align>
+
+  回顾在希尔伯特系统中，有反证法
+
+  <\equation*>
+    <frac|\<Sigma\>\<vdash\>\<neg\>A\<rightarrow\>false|\<Sigma\>\<vdash\>A>
+  </equation*>
+
+  归谬法：
+
+  <\equation*>
+    \<vdash\><around*|(|A\<rightarrowlim\>\<neg\>A|)>\<rightarrowlim\>\<neg\>A
+  </equation*>
+
+  这个否定后件就类似于Axiom3:逆否命题
+
+  \ 
+
+  <subsection|Double Negation Introduction>
+
+  <\theorem>
+    Double-negation introduction:
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<alpha\>|<around*|(|\<neg\><around*|(|\<neg\>\<alpha\>|)>|)>> >|<cell|<space|1em>\<neg\>\<neg\>i>>>>
+    </align>
+  </theorem>
+
+  <\proof>
+    \;
+
+    <\align>
+      <tformat|<table|<row|<cell|1 \ . >|<cell|\<alpha\> \ \ \ \ \ \ <space|4em>Premise>>|<row|<cell|<tabular*|<tformat|<table|<row|<cell|2.>>|<row|<cell|3.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|-1|1|-1|cell-halign|l>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|2|2|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<table|<row|<cell|\<neg\>\<alpha\><space|3em>>|<cell|Assumption>>|<row|<cell|\<perp\>>|<cell|\<neg\>e:1,2>>>>>>>|<row|<cell|4 \ . >|<cell|<around*|(|\<neg\><around*|(|\<neg\>\<alpha\>|)>|)><space|2em>\<neg\>i:2<textendash>3>>>>
+    </align>
+
+    \;
+  </proof>
+
+  <subsection|Proof by contradiction>
+
+  <\theorem>
+    Proof by contradiction 反证法
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|<tabular*|<tformat|<cwith|1|1|1|1|cell-tborder|1ln>|<cwith|3|3|1|1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<table|<row|<cell|<around*|(|\<neg\>\<alpha\>|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|\<perp\>>>>>>|\<alpha\>>>|<cell|<space|1em>PBC>>>>
+    </align>
+  </theorem>
+
+  <\proof>
+    \;
+
+    <\align>
+      <tformat|<table|<row|<cell|<tabular*|<tformat|<table|<row|<cell|1.>>|<row|<cell|2.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|-1|1|-1|cell-halign|l>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|2|2|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<table|<row|<cell|\<neg\>\<alpha\><space|2em>>|<cell|Premise>>|<row|<cell|\<perp\>>|<cell|Premise>>>>>>>|<row|<cell|3 \ . >|<cell|<around*|(|\<neg\><around*|(|\<neg\>\<alpha\>|)>|)><space|1em>\<neg\>i:1<textendash>2>>|<row|<cell|4 \ . >|<cell|\<alpha\><space|4em>\<neg\>\<neg\>e:3>>>>
+    </align>
+
+    \;
+  </proof>
+
+  <subsection|Law of Excluded Middle>
+
+  <\theorem>
+    tertiam non datur \ 排中律 LEM
+
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|<frac||<around*|(|\<alpha\>\<vee\>\<neg\>\<alpha\>|)>><space|1em>LEM >>>>
+    </align>
+
+    <math|无中生有>
+  </theorem>
+
+  在自然推演系统中无中生有显然比希尔伯特系统方便得多，但这个证明也需巧思。
+
+  <\proof>
+    \;
+
+    <\align>
+      <tformat|<table|<row|<cell|<tabular*|<tformat|<table|<row|<cell|1.>>|<row|<cell|2.>>|<row|<cell|3.>>|<row|<cell|4.>>|<row|<cell|5.>>|<row|<cell|6.>>|<row|<cell|7.>>>>>>|<cell|<tabular*|<tformat|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|5|5|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|1|-1|cell-halign|l>|<table|<row|<cell|\<neg\><around*|(|a\<vee\>\<neg\>a|)>>|<cell|Assumption>>|<row|<cell|<subtable|<tformat|<cwith|1|1|2|2|cell-tborder|1ln>|<cwith|3|3|2|2|cell-bborder|1ln>|<cwith|1|-1|2|2|cell-lborder|1ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<cwith|1|-1|2|2|cell-rborder|0ln>|<cwith|1|-1|1|1|cell-hmode|exact>|<cwith|1|-1|2|2|cell-hmode|exact>|<cwith|1|-1|1|1|cell-width|11672tmpt>|<cwith|1|-1|2|2|cell-width|119896tmpt>|<table|<row|<cell|>|<cell|a>>|<row|<cell|>|<cell|<around*|(|a\<vee\>\<neg\>a|)>>>|<row|<cell|>|<cell|\<perp\>>>>>>>|<cell|<subtable|<tformat|<cwith|1|1|1|1|cell-tborder|1ln>|<cwith|3|3|1|1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|0ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<cwith|1|-1|2|2|cell-lborder|1ln>|<table|<row|<cell|Assumption>|<cell|>>|<row|<cell|\<vee\>i:2>|<cell|>>|<row|<cell|\<perp\>i:1,3>|<cell|>>>>>>>|<row|<cell|\<neg\>a>|<cell|\<neg\>i:1<textendash>3>>|<row|<cell|<around*|(|a\<vee\>\<neg\>a|)><space|2em>>|<cell|\<vee\>i:5>>|<row|<cell|\<perp\>>|<cell|\<perp\>i:1,6>>>>>>>|<row|<cell|8 . >|<cell|\<neg\><around*|(|\<neg\><around*|(|a\<vee\>\<neg\>a|)>|)><space|1em>\<neg\>i:1<textendash>7>>|<row|<cell|9 . >|<cell|<around*|(|a\<vee\>\<neg\>a|)><space|3em>\<neg\>\<neg\>e:8>>>>
+    </align>
+
+    \;
+  </proof>
+
+  \;
+</body>
+
+<\initial>
+  <\collection>
+    <associate|page-medium|paper>
+    <associate|page-screen-margin|false>
+  </collection>
+</initial>
+
+<\references>
+  <\collection>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|2.5|4>>
+    <associate|auto-11|<tuple|3|5>>
+    <associate|auto-12|<tuple|3.1|5>>
+    <associate|auto-13|<tuple|3.2|5>>
+    <associate|auto-14|<tuple|3.3|5>>
+    <associate|auto-15|<tuple|3.4|6>>
+    <associate|auto-16|<tuple|3.5|6>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-3|<tuple|1.2|1>>
+    <associate|auto-4|<tuple|1.3|1>>
+    <associate|auto-5|<tuple|2|1>>
+    <associate|auto-6|<tuple|2.1|1>>
+    <associate|auto-7|<tuple|2.2|2>>
+    <associate|auto-8|<tuple|2.3|2>>
+    <associate|auto-9|<tuple|2.4|3>>
+  </collection>
+</references>
+
+<\auxiliary>
+  <\collection>
+    <\associate|toc>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Introduction><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-1><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|1.1<space|2spc>3 proof systems<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-2>>
+
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Alphabet of ND<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Formula of ND<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-4>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Inference 推理><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-5><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Reflexivity(Premise)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Inference Rules for Conjunction <with|mode|<quote|math>|\<wedge\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-7>>
+
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Inference Rules for Implication <with|mode|<quote|math>|\<rightarrow\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-8>>
+
+      <with|par-left|<quote|1tab>|2.4<space|2spc>Inference Rules for Disjunction <with|mode|<quote|math>|\<vee\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|1tab>|2.5<space|2spc>Inference Rules for Contradiction <with|mode|<quote|math>|\<perp\>> and Negation <with|mode|<quote|math>|\<neg\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-10>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Derived Rules><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-11><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|3.1<space|2spc>Definition<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-12>>
+
+      <with|par-left|<quote|1tab>|3.2<space|2spc>MT 否定后件（归谬）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-13>>
+
+      <with|par-left|<quote|1tab>|3.3<space|2spc>Double Negation Introduction<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-14>>
+
+      <with|par-left|<quote|1tab>|3.4<space|2spc>Proof by contradiction<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-15>>
+
+      <with|par-left|<quote|1tab>|3.5<space|2spc>Law of Excluded Middle<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-16>>
+    </associate>
+  </collection>
+</auxiliary>
