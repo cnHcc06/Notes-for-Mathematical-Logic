@@ -3,7 +3,7 @@
 This is the digital notes for the course "Introduction of Mathematical Logic".
 The course mainly contains the **Propositional Logic** (PL) and the **First Order Logic** (FOL). 
 ## Content 📖
-The note only contains the parts of **PL** and **FOL**, but the course also tells some prerequisites such as *logical Connectives*, and some extended knowledges like *Hoare Logic*, which will not be found in the note.   
+The note only contains the parts of **PL** and **FOL**, but the course also tells some prerequisites such as *logical Relationships*, and some extended knowledges like *Hoare Logic*, which will not be found in the note.   
 
 Nevertheless, these knowledge are either not so hard or not so important, the notes have already shown all the crucial things to take a galance at Mathematical Logic or take a test.   
 
