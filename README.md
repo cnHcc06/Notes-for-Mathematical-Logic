@@ -1,2 +1,2 @@
-# Notes-for-Mathematical-Logic
-This is the digital notes for the course "Introduction of Mathematical Logic". The course mainly contains the Propositional Logic and the First Order Logic. 
+# 第二部分：一阶谓词逻辑
+一阶谓词逻辑可以看作是命题逻辑的子类，它继承了命题逻辑的逻辑符号。
