@@ -1,0 +1,792 @@
+<TMU|<tuple|1.1.0|2026.1.2>>
+
+<style|<tuple|generic|chinese|table-captions-above|number-europe|preview-ref|framed-theorems>>
+
+<\body>
+  <doc-data|<doc-title|Deductive System>>
+
+  <\table-of-contents|toc>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|1<space|2spc>Reasoning and Proof><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-1><vspace|0.5fn>
+
+    <with|par-left|1tab|1.1<space|2spc>Everyday Reasoning<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-2>>
+
+    <with|par-left|1tab|1.2<space|2spc>Semantic entailment <with|mode|math|\<Sigma\>\<vDash\>A> (语义蕴涵)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-3>>
+
+    <with|par-left|1tab|1.3<space|2spc>purely semantical approach (纯语义方法)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-4>>
+
+    <with|par-left|1tab|1.4<space|2spc>Proof<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-5>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Proof System 形式推演系统><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-6><vspace|0.5fn>
+
+    <with|par-left|1tab|2.1<space|2spc>Definition of Proof<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-7>>
+
+    <with|par-left|1tab|2.2<space|2spc>Kinds of proof system<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-8>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Hilbert-style system \<Sigma\> \<vdash\><with|mode|math|<rsub|H>> A><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-9><vspace|0.5fn>
+
+    <with|par-left|1tab|3.1<space|2spc>Alphabet of <with|mode|math|\<cal*-H\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-10>>
+
+    <with|par-left|1tab|3.2<space|2spc>Formulas of <with|mode|math|\<cal*-H\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-11>>
+
+    <with|par-left|1tab|3.3<space|2spc>Axioms of <with|mode|math|\<cal*-H\>> \ 三条公理（蕴含覆盖，蕴含分配，逆否）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-12>>
+
+    <with|par-left|1tab|3.4<space|2spc>Inference Rule 分离规则<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-13>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Formal Proof of <with|mode|math|\<cal*-H\>>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-14><vspace|0.5fn>
+
+    <with|par-left|1tab|4.1<space|2spc>proof in <with|mode|math|\<cal*-H\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-15>>
+
+    <with|par-left|1tab|4.2<space|2spc>Theorem <with|mode|math|H<rsub|1>> （同一律 Identity<with|font-series|bold|math-font-series|bold|>）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-16>>
+
+    <with|par-left|1tab|4.3<space|2spc>Theorem of Soundness 稳健性<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-17>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc><with|mode|math|\<cal*-H\>> with Assumption><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-18><vspace|0.5fn>
+
+    <with|par-left|1tab|5.1<space|2spc>Definition<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-19>>
+
+    <with|par-left|1tab|5.2<space|2spc>Theorem of Universal Set<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-20>>
+
+    <with|par-left|1tab|5.3<space|2spc>Theorem of Monotonicity(单调性)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-21>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Derived rules in <with|mode|math|\<cal*-H\>> \ (二级公式)><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-22><vspace|0.5fn>
+
+    <with|par-left|1tab|6.1<space|2spc>Deduction rule 推导定理<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-23>>
+
+    <with|par-left|1tab|6.2<space|2spc>Theorem <with|mode|math|H<rsub|2>> （蕴涵传递律 Syllogism）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-24>>
+
+    <with|par-left|1tab|6.3<space|2spc>Theorem <with|mode|math|H<rsub|3>> （双重否定消除律 Double Negation Elimination）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-25>>
+
+    <with|par-left|1tab|6.4<space|2spc>Transitivity rule 蕴含传递<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-26>>
+
+    <with|par-left|1tab|6.5<space|2spc>Exchange of antecedent rule \ 蕴含交换律<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-27>>
+
+    <with|par-left|1tab|6.6<space|2spc>Theorem <with|mode|math|H<rsub|4> > \ (矛盾律 / 爆炸原理 Explosion / Ex Falso Quodlibet )<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-28>>
+
+    <with|par-left|1tab|6.7<space|2spc>Theorem <with|mode|math|H<rsub|5>> （真值公理 Verum / Falsum）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-29>>
+
+    <with|par-left|1tab|6.8<space|2spc>Theorem <with|mode|math|H<rsub|6>> （归谬律 Consequentia Mirabilis）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-30>>
+  </table-of-contents>
+
+  <section|Reasoning and Proof>
+
+  <subsection|Everyday Reasoning>
+
+  Using natural Language and intuition.
+
+  <subsection|Semantic entailment <math|\<Sigma\>\<vDash\>A> (语义蕴涵)>
+
+  Use semantic truth table (tableaux) to determine if A follows from \<Sigma\> (i.e., to reason semantically).
+
+  真值表
+
+  <subsection|purely semantical approach (纯语义方法)>
+
+  \<bullet\>语义真值表中的条目在计算上可能是爆炸性的（想想现实生活中的常识和数学中的公理）。
+
+  \<bullet\>真值表显示了每一种可能性，而具体的推理步骤或推理过程是不清楚的（例如，地图与逐向GPS方向）。
+
+  \<bullet\>推演方法通过<underline|语法或符号推理>（不关心语义）来补充语义方法。
+
+  <subsection|Proof>
+
+  A formal proof (形式证明) is a“logical chain”from assumptions to conclusions.
+
+  <section|Proof System 形式推演系统>
+
+  <\align>
+    <tformat|<table|<row|<cell|proof \ system>|<cell|<choice|<tformat|<table|<row|<cell|language part 语言部分>>|<row|<cell|inference part 推理部分>>>>>>>>>
+  </align>
+
+  <subsection|Definition of Proof>
+
+  Proof: Starting from a set of formulas and a set of axioms, obtaining new formulas through finitely many times of mechanically applying inference rules.
+
+  We notate “there is a proof with premises \<Sigma\> and conclusion A” by
+
+  <\align>
+    <tformat|<table|<row|<cell|\<Sigma\>\<vdash\>A>|<cell|>>>>
+  </align>
+
+  <subsection|Kinds of proof system>
+
+  <\itemize>
+    <item>Hilbert-style system (\<Sigma\> \<vdash\><math|<rsub|H>> A): many axioms and only one rule. The deduction is linear.
+
+    <item>Natural Deduction System (\<Sigma\> \<vdash\><math|<rsub|ND>> A): Few axioms (even none) and many rules. The deductions are tree-like.
+
+    <item>Resolution (\<Sigma\> \<vdash\><math|<rsub|Res>> A): used to prove contradictions.
+  </itemize>
+
+  <section|Hilbert-style system \<Sigma\> \<vdash\><math|<rsub|H>> A>
+
+  <subsection|Alphabet of <math|\<cal*-H\>>>
+
+  <math|\<Sigma\>=<around*|{|\<neg\>,\<rightarrow\>,<around*|(|,|)>,p,q,r\<ldots\>|}>>
+
+  <subsection|Formulas of <math|\<cal*-H\>>>
+
+  1. Atoms p, q, r, ... are formulas.
+
+  2. If A, B are formulas, then (\<neg\>A),(A \<rightarrow\> B) are also formulas.\ 
+
+  3. Only expressions of \<Sigma\> that are generated by 1. and 2. are formulas.
+
+  <subsection|Axioms of <math|\<cal*-H\>> \ 三条公理（蕴含覆盖，蕴含分配，逆否）>
+
+  <\itemize>
+    <item>Axiom 1. <math|A\<rightarrow\><around*|(|B\<rightarrow\>A|)>> \ \ 蕴含覆盖律
+
+    <item>Axiom 2. <math|<around*|(|A\<rightarrow\><around*|(|B\<rightarrow\>C|)><around*|\<nobracket\>||)>\<rightarrow\><around*|(|<around*|(|A\<rightarrow\>B|)>\<rightarrow\><around*|(|A\<rightarrow\>C|)>|\<nobracket\>>|)>> \ 蕴含分配律
+
+    <item>Axiom 3. <math|<around*|(|\<neg\>A\<rightarrowlim\>\<neg\>B|)>\<rightarrow\><around*|(|B\<rightarrow\>A|)>> \ 逆否命题
+  </itemize>
+
+  <subsection|Inference Rule 一个推理规则>
+
+  <\itemize>
+    <item>Modus ponens (MP, 分离规则)
+
+    A and <math|A\<rightarrow\>B >imply B \ 假言推理
+  </itemize>
+
+  <section|Formal Proof of <math|\<cal*-H\>>>
+
+  <subsection|proof in <math|\<cal*-H\>>>
+
+  <\definition>
+    A proof of formula A in <math|\<cal*-H\>> is a finite sequence of formulas(证明序列)
+
+    <\align>
+      <tformat|<table|<row|<cell|A<rsub|1>,A<rsub|2>,\<ldots\>>|<cell|A<rsub|n>>>>>
+    </align>
+
+    such that for any <math|i\<leqslant\>n>, <math|A<rsub|i>> is
+
+    <\itemize>
+      <item>an axiom in <math|\<cal*-H\>>
+
+      <item>or is <math|A<rsub|j>> (j\<less\>i)
+
+      <item>or is derived from <math|A<rsub|j>>,<math|A<rsub|k><around*|(|j,k\<less\>i|)>> by MP
+    </itemize>
+  </definition>
+
+  \;
+
+  For <math|A<rsub|n>>, the last formula in the sequence, we say that:
+
+  <\itemize>
+    <item>An is a theorem in <math|\<cal*-H\>>
+
+    <item>The sequence A1, A2, ..., An is a proof of An\ 
+
+    <item>An is provable, denoted by \<vdash\> An.
+  </itemize>
+
+  \;
+
+  <subsection|Theorem <math|H<rsub|1>> （同一律 Identity<strong|>）>
+
+  <\theorem>
+    Theorem <math|H<rsub|1>> 同一律
+
+    <math|\<vdash\>A\<rightarrow\>A>
+  </theorem>
+
+  <strong|“我是我”>最基础的自反性。A 蕴含 A，废话但必须说。
+
+  <\proof>
+    \;
+
+    <math|A<rsub|1><space|1em>\<vdash\><around*|(|A\<rightarrow\><around*|(|<around*|(|A\<rightarrow\>A|)>\<rightarrow\>A|)>|)>\<rightarrow\><around*|(|<around*|(|A\<rightarrow\><around*|(|A\<rightarrow\>A|)>|)>\<rightarrow\><around*|(|A\<rightarrow\>A|)>|)><space|1em>>Axiom 2 with B=<math|<around*|(|A\<rightarrow\>A|)> >and C=A
+
+    <math|A<rsub|2><space|1em>\<vdash\>A\<rightarrow\><around*|(|<around*|(|A\<rightarrow\>A|)>\<rightarrow\>A|)> > \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Axiom 1 with B=<math|<around*|(|A\<rightarrow\>A|)>>
+
+    <math|A<rsub|3><space|1em>\<vdash\>><math|<around*|(|A\<rightarrow\><around*|(|A\<rightarrow\>A|)>|)>\<rightarrow\><around*|(|A\<rightarrow\>A|)>> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MP <math|A<rsub|1> ,A<rsub|2>>
+
+    <math|A<rsub|4><space|1em>\<vdash\><around*|(|A\<rightarrow\><around*|(|A\<rightarrow\>A|)>|)>> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Axiom 1 with B=A
+
+    <math|A<rsub|5><space|1em>\<vdash\>A\<rightarrow\>A> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MP <math|A<rsub|3>,A<rsub|4>>
+
+    \ 
+  </proof>
+
+  <subsection|Theorem of Soundness 稳健性>
+
+  <\theorem>
+    希尔伯特形式系统的所有结论都是恒真的
+
+    If <math|\<vdash\>\<alpha\>,then\<vDash\>\<alpha\>>
+  </theorem>
+
+  <\proof>
+    Prove by structural induction
+
+    如果<math|\<vdash\>\<alpha\>>, 那么存在一个证明序列<math|A<rsub|1>,A<rsub|2>,\<ldots\>,A<rsub|n>>使得<math|A<rsub|n>=\<alpha\>>.
+
+    然后根据证明序列的构造方法，用数学归纳证明<math|\<cal*-H\>>下的所有结论<math|A<rsub|k>>恒真。
+
+    <\itemize>
+      <item>Base Case : <math|k=1,A<rsub|1>=Axiom 1,2,3> ，容易证明，公理都恒真，<math|\<vDash\>A<rsub|1>>
+    </itemize>
+
+    <\itemize>
+      <item>Inductive Hypothesis: Assume k\<less\>n, <math|\<vdash\>A<rsub|k>\<Rightarrow\>\<vDash\>A<rsub|k>>
+
+      <item>Inductive Step: <math|A<rsub|n>>
+
+      Case 1: <math|A<rsub|n> is an axiom,*\<vDash\>A<rsub|n>>
+
+      Case 2: <math|A<rsub|n> is A<rsub|j> <around*|(|j\<less\>n|)>,>
+
+      \ \ \ \ By I.H. <math|\<vDash\>A<rsub|j>,so\<vDash\>A<rsub|n>>
+
+      Case 3: <math|There exist\<vdash\>A<rsub|j> and\<vdash\>A<rsub|j>\<rightarrow\>A<rsub|n>>
+
+      \ \ \ \ By I.H. <math|\<vDash\>A<rsub|j>,and \<vDash\>A<rsub|j>\<rightarrow\>A<rsub|n>>
+
+      \ \ \ \ Combine them :
+
+      \ \ \ \ <math|\<vDash\>A<rsub|j> tells that A<rsub|j><rsup|v>=1 for \<forall\>v,>
+
+      \ \ \ \ <math|><math|\<vDash\>A<rsub|j>\<rightarrow\>A<rsub|n> tells that <around*|(|A<rsub|j>\<rightarrow\>A<rsub|n>|)><rsup|v>=1 for \<forall\>v>
+
+      \ \ \ \ We can conclude that <math|A<rsub|n><rsup|v>=1 for \<forall\>v,otherwise there exist a v such that ><math|<around*|(|A<rsub|j>\<rightarrow\>A<rsub|n>|)><rsup|v>=0>
+
+      \ \ \ \ So <math|\<vDash\>A<rsub|n>>
+
+      <item>Conclusion: For proof sequence in <math|\<cal*-H\> > of all length, If <math|\<vdash\>\<alpha\>,then\<vDash\>\<alpha\>>.
+
+      \;
+    </itemize>
+
+    \;
+  </proof>
+
+  <section|<math|\<cal*-H\>> with Assumption>
+
+  <subsection|Definition>
+
+  <\definition>
+    If a formula A has a proof with a set of assumption(premises) <math|\<Sigma\>>, we say "A can be proved from <math|\<Sigma\>>", denoted as <math|\<Sigma\>\<vdash\><rsub|H>A or simply \<Sigma\>\<vdash\>A>, which is a finite sequence of formulas:\ 
+
+    <\align>
+      <tformat|<table|<row|<cell|A<rsub|1>,A<rsub|2>,\<ldots\>>|<cell|A<rsub|n>>>>>
+    </align>
+
+    such that for any <math|i\<leqslant\>n,A<rsub|i>> is
+
+    <\itemize>
+      <item>an axiom in <math|\<cal*-H\>> or a formula in <math|\<Sigma\>>
+
+      <item>or is <math|A<rsub|j>> (j\<less\>i)
+
+      <item>or is derived from <math|A<rsub|j>>,<math|A<rsub|k><around*|(|j,k\<less\>i|)>> by MP
+    </itemize>
+
+    If <math|\<Sigma\>=\<varnothing\>,then> <math|\<Sigma\>\<vdash\>A is just simply \<vdash\>A>
+  </definition>
+
+  <subsection|Theorem of Universal Set>
+
+  <\theorem>
+    <math|<around*|{|\<alpha\>,\<neg\>\<alpha\>|}>\<vdash\>\<beta\>> \ for any assumption <math|\<alpha\>> and formula <math|\<beta\>>.
+  </theorem>
+
+  为了证明该命题，我们需要证明公式<math|\<beta\>>,
+
+  它只能通过MP分离从<math|\<alpha\>\<rightarrow\>\<beta\>>和<math|\<alpha\>>得来。
+
+  我们需要<math|\<alpha\>\<rightarrow\>\<beta\>>，它并不符合三个公理的形式，因此仍然只能通过MP分离得来
+
+  或许关注Axiom1？
+
+  <\align>
+    <tformat|<table|<row|<cell|\<vdash\>A>|<cell|>>|<row|<cell|\<vdash\>A>|<cell|\<rightarrow\><around*|(|B\<rightarrow\>A|)>>>|<row|<cell|\<vdash\><around*|(|B|\<nobracket\>>>|<cell|\<rightarrow\>A<around*|\<nobracket\>||)>>>>>
+  </align>
+
+  这需要<math|\<vdash\>A,我们现在只有\<vdash\>\<alpha\>和\<vdash\>\<neg\>\<alpha\>，这样最终只能得到\<beta\>\<rightarrow\>\<alpha\>>，这样不对，我们需要<math|\<beta\>>在后面的情形。发现Axiom3可以互换<math|\<alpha\>和\<beta\>>的相对位置，因此我们可以先用Axiom1得到<math|<around*|(|\<neg\>\<beta\>\<rightarrow\>\<neg\>\<alpha\>|)>，再用>Axiom3得到<math|<around*|(|\<alpha\>\<rightarrow\>\<beta\>|)>。>
+
+  <\proof>
+    \;
+
+    令<math|\<Sigma\>=<around*|{|\<alpha\>,\<neg\>\<alpha\>|}>>
+
+    <\align>
+      <tformat|<twith|table-halign|l>|<cwith|1|1|1|1|cell-halign|l>|<cwith|2|-1|1|1|cell-halign|l>|<table|<row|<cell|A<rsub|1>:\<Sigma\>\<vdash\>\<neg\>\<alpha\> >|<cell|Assumption>>|<row|<cell|A<rsub|2>:\<Sigma\>\<vdash\>\<neg\>\<alpha\>\<rightarrow\><around*|(|\<neg\>\<beta\>\<rightarrow\>\<neg\>\<alpha\>|)>>|<cell|Axiom 1>>|<row|<cell|A<rsub|3>:\<Sigma\>\<vdash\>\<neg\>\<beta\>\<rightarrow\>\<neg\>\<alpha\>>|<cell|MP A<rsub|1>,A<rsub|2> >>|<row|<cell|A<rsub|4>:\<Sigma\>\<vdash\><around*|(|\<neg\>\<beta\>\<rightarrow\>\<neg\>\<alpha\>|)>\<rightarrow\><around*|(|\<alpha\>\<rightarrow\>\<beta\>|)>>|<cell|Axiom 3>>|<row|<cell|A<rsub|5>:\<Sigma\>\<vdash\>\<alpha\>\<rightarrow\>\<beta\>>|<cell|MP A<rsub|3>,A<rsub|4>>>|<row|<cell|A<rsub|6>:\<Sigma\>\<vdash\>\<alpha\>>|<cell|Assumption>>|<row|<cell|A<rsub|7>:\<Sigma\>\<vdash\>\<beta\>>|<cell|MP A<rsub|5>,A<rsub|6>>>>>
+    </align>
+
+    \;
+  </proof>
+
+  <subsection|Theorem of Monotonicity(单调性)>
+
+  <\definition>
+    Monotonicity
+
+    A proof system is monotonicity if for any set of formulas <math|\<Sigma\>> and formulas A,B:
+
+    <\align>
+      <tformat|<table|<row|<cell|\<Sigma\>\<vdash\>A implies>|<cell|\<Sigma\>\<cup\><around*|{|B|}>\<vdash\>A>>>>
+    </align>
+
+    In other words, if we can proof A using <math|\<Sigma\>>, adding more assumption to <math|\<Sigma\>> should not prevent A from still being provable.
+  </definition>
+
+  希尔伯特系统就是单调的，证明从略。
+
+  <section|Derived rules in <math|\<cal*-H\>> \ (二级公式)>
+
+  <subsection|Deduction rule 推演定理>
+
+  <\theorem>
+    Deduction Rule
+
+    For any set of formula <math|\<Sigma\>> and formulas A,B in <math|\<cal*-H\>> :
+
+    <\align>
+      <tformat|<table|<row|<cell|\<Sigma\>\<cup\><around*|{|A|}>\<vdash\>B >|<cell|if and only if \ \<Sigma\>\<vdash\>A\<rightarrow\>B>>>>
+    </align>
+
+    Specifically, {A}<math|\<vdash\>B<space|1em>if and only if\<vdash\>A\<rightarrow\>B>
+  </theorem>
+
+  这个定理很容易理解，但由于充要性，它比想象中的要更强。
+
+  <\proof>
+    \;
+
+    必要性：<math|<tabular|<tformat|<table|<row|<cell|\<Sigma\>\<cup\><around*|{|A|}>\<vdash\>B<space|1em>\<Rightarrow\>>|<cell| \<Sigma\>\<vdash\>A\<rightarrow\>B>>>>>>
+
+    1.假设：我们已知<nbsp>\<Sigma\> \<cup\> {A} \<vdash\> B。这意味着存在一个从前提集 \<Sigma\> \<cup\> {A} 出发，推导出<nbsp><code*|B><nbsp>的有限证明序列。我们记这个序列为<nbsp>C₁, C₂, ..., Cₙ，其中<nbsp>Cₙ<nbsp>就是<nbsp>B。
+
+    2.目标：我们要证明<nbsp>\<Sigma\> \<vdash\> A \<rightarrow\> B，也就是要证明<nbsp>\<Sigma\> \<vdash\> A \<rightarrow\> Cₙ。
+
+    3.证明思路：我们将使用<strong|数学归纳法>证明对于这个证明序列中的每一个公式<nbsp><code*|Cᵢ><nbsp>(其中 i 从 1 到 n)，都有<nbsp>\<Sigma\> \<vdash\> A \<rightarrow\> Cᵢ。如果这一点成立，那么当 i=n 时，我们自然就得到了<nbsp>\<Sigma\> \<vdash\> A \<rightarrow\> Cₙ，即 \<Sigma\> \<vdash\> A \<rightarrow\> B。
+
+    4.归纳证明：
+
+    对于序列中任意一个公式<math|C<rsub|i>>，它出现在证明序列中只有三种可能的原因。
+
+    Case1：<math|C<rsub|i>>是一个公理，或者<math|C<rsub|i>>是前提集<math|\<Sigma\>>中的一个公式。
+
+    \ \ \ \ 如果是公理，则运用单调性。总之，我们得到
+
+    <\align>
+      <tformat|<table|<row|<cell|\<Sigma\>>|<cell|\<vdash\>C<rsub|i>>>>>
+    </align>
+
+    \ \ \ \ 有Axiom 1
+
+    <\align>
+      <tformat|<table|<row|<cell|\<Sigma\>\<vdash\>C<rsub|i>\<rightarrow\><around*|(|A\<rightarrow\>C<rsub|i>|)>>|<cell|>>>>
+    </align>
+
+    \ \ \ \ 利用假言推理MP，得到：
+
+    <\align>
+      <tformat|<table|<row|<cell|\<Sigma\>>|<cell|\<vdash\>A\<rightarrow\>C<rsub|i>>>>>
+    </align>
+
+    Case2：<math|C<rsub|i>>是A。
+
+    \ \ \ \ 由<math|H<rsub|1>>同一律，加上单调性，同样有：
+
+    <\align>
+      <tformat|<table|<row|<cell|\<Sigma\>>|<cell|\<vdash\>A\<rightarrow\>C<rsub|i>>>>>
+    </align>
+
+    Case3：<math|C<rsub|i>>由假言推理得来。
+
+    <space|1em>这意味着在 Cᵢ 之前，序列中已经存在两个公式 Cⱼ 和 Cₖ (j, k \<less\> i)，使得 Cₖ 的形式是 Cⱼ \<rightarrow\> Cᵢ。
+
+    \;
+
+    归纳奠基：当i=1，<math|C<rsub|1>>显然只能是Case1或Case2，\<Sigma\> \<vdash\> A \<rightarrow\> Cᵢ 直接成立。
+
+    归纳假设：假设当k\<less\>i，都有\<Sigma\> \<vdash\> A \<rightarrow\> <math|C<rsub|k>>成立
+
+    归纳递推：对于<math|C<rsub|i>>，Case1和Case2都成立，对于Case3：
+
+    <space|1em>由归纳假设，有1. \<Sigma\> \<vdash\> A \<rightarrow\> <math|C<rsub|j>>，2. \<Sigma\> \<vdash\> A \<rightarrow\> <math|<around*|(|C<rsub|j>\<rightarrow\>C<rsub|i>|)>>，
+
+    <space|1em>于是：
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1:\<Sigma\>>|<cell|\<vdash\>>|<cell|A\<rightarrow\>C<rsub|j><space|3em>>>|<row|<cell|2:\<Sigma\>>|<cell|\<vdash\>>|<cell|A\<rightarrow\><around*|(|C<rsub|j>\<rightarrow\>C<rsub|i>|)>>>|<row|<cell|3:\<Sigma\>>|<cell|\<vdash\>>|<cell|<around*|(|A\<rightarrow\><around*|(|C<rsub|j>\<rightarrow\>C<rsub|i>|)>|)>\<rightarrow\><around*|(|<around*|(|A\<rightarrow\>C<rsub|j>|)>\<rightarrow\><around*|(|A\<rightarrow\>C<rsub|i>|)>|)><space|2em>Axiom2 蕴含分配率>>|<row|<cell|4:\<Sigma\>>|<cell|\<vdash\>>|<cell|<around*|(|A\<rightarrow\>C<rsub|j>|)>\<rightarrow\><around*|(|A\<rightarrow\>C<rsub|i>|)><space|1em>MP 2 ,3>>|<row|<cell|5:\<Sigma\>>|<cell|\<vdash\>>|<cell|A\<rightarrow\>C<rsub|i><space|1em>MP 1,4>>>>
+    </eqnarray*>
+
+    归纳总结：因此对所有<math|C<rsub|i>都有\<Sigma\>\<vdash\>A\<rightarrow\>C<rsub|i>，自然有当i=n,\<Sigma\>\<vdash\>A\<rightarrow\>C<rsub|n>，即\<Sigma\>\<vdash\>A\<rightarrow\>B>
+
+    \;
+
+    充分性：<math|\<Sigma\>\<vdash\>A\<rightarrow\>B<space|1em>\<Rightarrow\><space|1em>\<Sigma\>\<cup\><around*|{|A|}>\<vdash\>B>
+
+    <space|1em>这部分会容易许多。
+
+    <space|1em>由单调性Monotonity,
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1.<space|3em>\<Sigma\>>|<cell|\<vdash\>>|<cell|A\<rightarrow\>B>>|<row|<cell|2. \<Sigma\>\<cup\><around*|{|A|}>>|<cell|\<vdash\>>|<cell|A\<rightarrow\>B<space|2em>Monotonity>>|<row|<cell|3. \<Sigma\>\<cup\><around*|{|A|}>>|<cell|\<vdash\>>|<cell|A>>|<row|<cell|4. \<Sigma\>\<cup\><around*|{|A|}>>|<cell|\<vdash\>>|<cell|B<space|1em>MP2,3>>>>
+    </eqnarray*>
+
+    \;
+  </proof>
+
+  有了这个定理，我们就可以把推导的左侧变为前提，与原先前提一起共同推出右边，这一定程度上弥补了希尔伯特系统在证明蕴含逻辑式的不方便。下面就是一个经典的例子。
+
+  从这个定理我们也能感受到前提真正的作用：参与到证明序列中证得前置结论，最后蕴含覆盖前置结论。
+
+  <subsection|Theorem <math|H<rsub|2>> （蕴涵传递律 Syllogism）>
+
+  <\theorem>
+    Theorem <math|H<rsub|2>> \ 蕴涵传递律
+
+    \<vdash\> (A \<rightarrow\> B) \<rightarrow\> ((B \<rightarrow\> C) \<rightarrow\> (A \<rightarrow\> C))
+  </theorem>
+
+  <strong|“链条传递”>如果 A 导致 B，且 B 导致 C，那么 A 导致 C。这是逻辑推理的“桥梁”。
+
+  <\proof>
+    \;
+
+    Proof\ 
+
+    <\enumerate>
+      <assign|labelenumi|<macro|<number|<enumi-nr>|arabic>.>>
+
+      <item><math|<around|{|A\<to\>B,B\<to\>C,A|}>\<vdash\>A> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Assumption
+
+      <item><math|<around|{|A\<to\>B,B\<to\>C,A|}>\<vdash\>A\<to\>B> \ \ \ \ \ \ \ \ \ \ \ \ Assumption
+
+      <item><math|<around|{|A\<to\>B,B\<to\>C,A|}>\<vdash\>B> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MP 1, 2
+
+      <item><math|<around|{|A\<to\>B,B\<to\>C,A|}>\<vdash\>B\<to\>C> \ \ \ \ \ \ \ \ \ \ \ Assumption
+
+      <item><math|<around|{|A\<to\>B,B\<to\>C,A|}>\<vdash\>C> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MP3,4
+
+      <item><math|<around|{|A\<to\>B,B\<to\>C|}>\<vdash\>A\<to\>C> \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Deduction 5
+
+      <item><math|<around|{|A\<to\>B|}>\<vdash\><around|(|<around|(|B\<to\>C|)>\<to\><around|(|A\<to\>C|)>|)>> \ \ \ \ \ \ Deduction 6
+
+      <item><math|\<vdash\><around|(|A\<to\>B|)>\<to\><around|(|<around|(|B\<to\>C|)>\<to\><around|(|A\<to\>C|)>|)>> \ \ \ \ \ Deduction 7
+    </enumerate>
+  </proof>
+
+  如果我们闲得蛋疼，还能用它方便地证明公理二，不过可惜的是，推演定理也是要用到公理二证明的。
+
+  <subsection|Theorem <math|H<rsub|3>> （双重否定消除律 Double Negation Elimination）>
+
+  <\theorem>
+    双重否定消除律
+
+    \<vdash\> \<neg\>\<neg\>A \<rightarrow\> A
+
+    <math|\<vdash\>A\<rightarrowlim\>\<neg\>\<neg\>A>
+  </theorem>
+
+  <strong|“负负得正”>经典逻辑的标志。否定的否定就是肯定。这是<strong|<with|font-series|Noto CJK SC|经典逻辑>>区别于直觉主义逻辑的分水岭。
+
+  <\proof>
+    \;
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1:<around*|{|\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>A\<rightarrow\><around*|(|\<neg\>\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>A|)><space|4em>Axiom 1>>|<row|<cell|2:<around*|{|\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>A<space|13em>Assumption>>|<row|<cell|3:<around*|{|\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>A<space|8em>MP 1,2>>|<row|<cell|4:<around*|{|\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|<around*|(|\<neg\>\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>A|)>\<rightarrow\><around*|(|\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>\<neg\>A|)> Axiom 3>>|<row|<cell|5:<around*|{|\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|<around*|(|\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>\<neg\>A|)><space|9em>MP 3,4>>|<row|<cell|6:<around*|{|\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|<around*|(|\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>\<neg\>A|)>\<rightarrow\><around*|(|\<neg\>\<neg\>A\<rightarrowlim\>A|)><space|3em>Axiom3>>|<row|<cell|7:<around*|{|\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>A\<rightarrowlim\>A<space|11em>MP 5,6>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|8:<around*|{|\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>A<space|2em><space|11em>Assumption>>|<row|<cell|9:<around*|{|\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|A<space|2em>?<space|12em>MP 7,8>>|<row|<cell|10:<application-space|2em><application-space|1em>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>A\<rightarrow\>A<space|11em>Deduction>>>>
+    </eqnarray*>
+
+    说明：3-6用2次逆否就是为了在蕴含的右边产生<math|\<neg\>\<neg\>A>，这样才能利用假设和蕴含覆盖公理。
+
+    \;
+  </proof>
+
+  <\proof>
+    由于我们的公理、引理大多都是去<math|\<neg\>>的，因此加<math|\<neg\>>的证明会很不方便，只能尽可能构造更多的<math|\<neg\>寻找机会>。
+
+    <space|2em>比如下面就通过逆否构造更多的<math|\<neg\>>移入前提，然后再用公理系统处理。
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1<around*|{|A,\<neg\>\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>\<neg\>A\<rightarrow\><around*|(|\<neg\>\<neg\>\<neg\>\<neg\>\<neg\>A\<rightarrow\>\<neg\>\<neg\>\<neg\>A|)><space|2em>#经典开局>>|<row|<cell|2<around*|{|A,\<neg\>\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>\<neg\>A>>|<row|<cell|3<around*|{|A,\<neg\>\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>\<neg\>\<neg\>\<neg\>A\<rightarrow\>\<neg\>\<neg\>\<neg\>A>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|#>|<cell|用两次逆否化解>>|<row|<cell|5<around*|{|A,\<neg\>\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>A\<rightarrow\>\<neg\>\<neg\>\<neg\>\<neg\>A>>|<row|<cell|>|<cell|>|<cell|#过程从略>>|<row|<cell|7<around*|{|A,\<neg\>\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>A>>|<row|<cell|>|<cell|#>|<cell|>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|#>|<cell|消去一个多出的前提>>|<row|<cell|8<around*|{|A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>\<neg\>A\<rightarrow\><around*|(|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>A|)>>>|<row|<cell|9<around*|{|A|}>>|<cell|\<vdash\>>|<cell|<around*|(|\<neg\>\<neg\>\<neg\>A\<rightarrow\><around*|(|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>A|)>|)>\<rightarrow\><around*|(|<around*|(|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>\<neg\>A|)>\<rightarrow\><around*|(|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>A|)>|)><space|5em>>>|<row|<cell|>|<cell|>|<cell|#这里罕见的用到Axiom2，因为分配后就能变成同一律>>|<row|<cell|10<around*|{|A|}>>|<cell|\<vdash\>>|<cell|<around*|(|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>\<neg\>A|)>\<rightarrow\><around*|(|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>A|)><space|2em>MP>>|<row|<cell|11<around*|{|A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>\<neg\>A<space|2em>#再叠加同一律>>|<row|<cell|12<around*|{|A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>A>>|<row|<cell|>|<cell|#>|<cell|成功消除>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|13<around*|{|A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>A<space|2em>#\<uparrow\>添置\<neg\>>>|<row|<cell|>|<cell|\<vdash\>>|<cell|<around*|(|\<neg\>\<neg\>\<neg\>A\<rightarrowlim\>\<neg\>A|)>\<rightarrow\><around*|(|A\<rightarrowlim\>\<neg\>\<neg\>A|)>>>|<row|<cell|14<around*|{|A|}>>|<cell|\<vdash\>>|<cell|A\<rightarrowlim\>\<neg\>\<neg\>A<space|8em>MP>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|15<around*|{|A|}>>|<cell|\<vdash\>>|<cell|A>>|<row|<cell|16<around*|{|A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>A<space|10em>MP>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|**17<application-space|2em>>|<cell|\<vdash\>>|<cell|A\<rightarrowlim\>\<neg\>\<neg\>A<space|8em>Deduction>>>>
+    </eqnarray*>
+
+    \;
+  </proof>
+
+  <subsection|Transitivity rule 蕴含传递>
+
+  <\theorem>
+    Transitivity rule
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<Sigma\>\<vdash\>A\<rightarrow\>B<space|1em>\<Sigma\>\<vdash\>B\<rightarrow\>C|\<Sigma\>\<vdash\>A\<rightarrow\>C>>|<cell|>>>>
+    </align>
+  </theorem>
+
+  <\proof>
+    \;
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1:\<Sigma\>>|<cell|\<vdash\>>|<cell|<around*|(|A\<rightarrow\>B|)>\<rightarrow\><around*|(|<around*|(|B\<rightarrow\>C|)>\<rightarrow\><around*|(|A\<rightarrow\>C|)>|)><space|2em>H<rsub|2><space|1em>蕴含传递律>>|<row|<cell|2:\<Sigma\>>|<cell|\<vdash\>>|<cell|A\<rightarrow\>B<space|13em>Have<space|3em>>>|<row|<cell|3:\<Sigma\>>|<cell|\<vdash\>>|<cell|<around*|(|B\<rightarrow\>C|)>\<rightarrow\><around*|(|A\<rightarrow\>C|)><space|7em>MP1,2>>|<row|<cell|4:\<Sigma\>>|<cell|\<vdash\>>|<cell|B\<rightarrow\>C<space|13em>Have>>|<row|<cell|5:\<Sigma\>>|<cell|\<vdash\>>|<cell|A\<rightarrow\>C<space|13em>MP 3,4>>>>
+    </eqnarray*>
+
+    \;
+  </proof>
+
+  <subsection|Exchange of antecedent rule \ 蕴含交换律>
+
+  <\theorem>
+    Exchange of antecedent rule
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<Sigma\> \<vdash\> A \<rightarrow\> (B \<rightarrow\> C)|\<Sigma\> \<vdash\> B \<rightarrow\> (A \<rightarrow\> C)>>|<cell|>>>>
+    </align>
+
+    正如其名，只是条件交换了一下。用 Monotonity 和 Deduction 就能轻易推出。
+  </theorem>
+
+  <\proof>
+    \;
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1:*<application-space|1em>**<application-space|1em>***<application-space|1em><space|1em>\<Sigma\>>|<cell|\<vdash\>>|<cell|A\<rightarrow\><around*|(|B\<rightarrow\>C|)>>>|<row|<cell|2:\<Sigma\>\<cup\><around*|{|A,B|}>>|<cell|\<vdash\>>|<cell|A\<rightarrow\><around*|(|B\<rightarrow\>C|)><space|2em>Monotonity>>|<row|<cell|3:\<Sigma\>\<cup\><around*|{|A,B|}>>|<cell|\<vdash\>>|<cell|A<space|2em>Assumption>>|<row|<cell|4:\<Sigma\>\<cup\><around*|{|A,B|}>>|<cell|\<vdash\>>|<cell|B\<rightarrow\>C<space|1em>MP1,2>>|<row|<cell|5:\<Sigma\>\<cup\><around*|{|A,B|}>>|<cell|\<vdash\>>|<cell|B<space|2em>Assumption>>|<row|<cell|6:\<Sigma\>\<cup\><around*|{|A,B|}>>|<cell|\<vdash\>>|<cell|C<space|2em>MP3,4<space|3em>（下潜完成）>>|<row|<cell|7:*<application-space|1em> \<Sigma\>\<cup\><around*|{|B|}>>|<cell|\<vdash\>>|<cell|A\<rightarrow\>C>>|<row|<cell|8:*\<space\>*<application-space|1em>**<application-space|1em>***<application-space|1em><space|1em>\<Sigma\>>|<cell|\<vdash\>>|<cell|B\<rightarrow\><around*|(|A\<rightarrow\>C|)><space|3em>（上浮完成）>>>>
+    </eqnarray*>
+
+    这种利用Monotonity 和 Deduction的证明，我称之为“潜泳式证明”，以形象描述两个标志性阶段：“下潜”和“上浮”。
+
+    \;
+  </proof>
+
+  <subsection|Theorem <math|H<rsub|4> > \ (矛盾律 / 爆炸原理 Explosion / Ex Falso Quodlibet )>
+
+  <\theorem>
+    矛盾律
+
+    <\align>
+      <tformat|<table|<row|<cell|\<vdash\>>|<cell|\<neg\>A\<rightarrow\><around*|(|A\<rightarrow\>B|)>>>>>
+    </align>
+
+    <\equation*>
+      \<vdash\>A\<rightarrow\><around*|(|\<neg\>A\<rightarrow\>B|)>
+    </equation*>
+  </theorem>
+
+  <strong|“矛盾生万物”>如果你既有 A 又有非 A（矛盾），你就能推导出任何结论 B（爆炸）。
+
+  <\proof>
+    \;
+
+    仍然利用Deduction Rule
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|{|\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>A<space|10em>Assumption>>|<row|<cell|<around*|{|\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>A\<rightarrow\><around*|(|\<neg\>B\<rightarrowlim\>\<neg\>A|)><space|4em>Axiom1>>|<row|<cell|<around*|{|\<neg\>A|}>>|<cell|\<vdash\>>|<cell|<around*|(|\<neg\>B\<rightarrowlim\>\<neg\>A|)><space|7em>MP1,2>>|<row|<cell|<around*|{|\<neg\>A|}>>|<cell|\<vdash\>>|<cell|<around*|(|\<neg\>B\<rightarrowlim\>\<neg\>A|)>\<rightarrow\><around*|(|A\<rightarrow\>B|)><space|2em>Axiom 3>>|<row|<cell|<around*|{|\<neg\>A|}>>|<cell|\<vdash\>>|<cell|<around*|(|A\<rightarrow\>B|)><space|8em>MP3,4>>|<row|<cell|>|<cell|\<vdash\>>|<cell|\<neg\>A\<rightarrow\><around*|(|A\<rightarrow\>B|)><space|5em>Deduction>>>>
+    </eqnarray*>
+
+    \;
+  </proof>
+
+  <subsection|Theorem <math|H<rsub|5>> （真值公理 Verum / Falsum）>
+
+  <\theorem>
+    真值公理
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|\<vdash\>>|<cell|true>>|<row|<cell|>|<cell|\<vdash\>>|<cell|\<neg\>false>>>>
+    </eqnarray*>
+  </theorem>
+
+  <strong|“真假分明”>真（True）是绝对成立的；假（False）是绝对不成立的（即非假）。
+
+  <\subsection>
+    Theorem <math|H<rsub|6>> （归谬律 Consequentia Mirabilis）
+  </subsection>
+
+  <\theorem>
+    Reductio ad absurdum 反证法
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<Sigma\> \<vdash\> \<neg\>A \<rightarrow\> false|\<Sigma\> \<vdash\> A>>|<cell|>>>>
+    </align>
+  </theorem>
+
+  \;
+
+  <\proof>
+    \;
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1.\<Sigma\>>|<cell|\<vdash\>>|<cell|\<neg\>A \<rightarrow\> false<space|9em>Assumption>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|2.\<Sigma\>>|<cell|\<vdash\>>|<cell|false\<rightarrowlim\>\<neg\>\<neg\>false<space|7em>H<rsub|3>双重否定消除律>>|<row|<cell|3.\<Sigma\>>|<cell|\<vdash\>>|<cell|\<neg\>A\<rightarrowlim\>\<neg\>\<neg\>false<space|8em>Transtivity Rule 3,4蕴含传递率>>|<row|<cell|>|<cell|>|<cell|<around*|(|本证明的核心——逆否+真值公理|)>>>|<row|<cell|4.\<Sigma\>>|<cell|\<vdash\>>|<cell|<around*|(|\<neg\>A \<rightarrow\> \<neg\>\<neg\>false|)>\<rightarrow\><around*|(|\<neg\>false\<rightarrow\>A|)>\<space\>*<application-space|1em> Axiom 3<space|1em>逆否公理 >>|<row|<cell|5.\<Sigma\>>|<cell|\<vdash\>>|<cell|\<neg\>false\<rightarrow\>A<space|9em>MP 3,4>>|<row|<cell|6.\<Sigma\>>|<cell|\<vdash\>>|<cell|\<neg\>false<space|11em>真值公理 >>|<row|<cell|7.\<Sigma\>>|<cell|\<vdash\>>|<cell|A<space|13em>MP 1,5>>>>
+    </eqnarray*>
+
+    \ \ \ \ 自从有了双向的双重否定消除律<math|H<rsub|3>>，加减<math|\<neg\>>都变得一样容易。
+
+    \ \ \ \ <with|font-series|bold|想要在implication中添置<math|\<neg\>\<neg\>>，直接用<math|H<rsub|3>>双重否定+蕴含传递即可>
+
+    \;
+  </proof>
+
+  \;
+
+  <\theorem>
+    Theorem <math|H<rsub|6>> 归谬律
+
+    <\align>
+      <tformat|<table|<row|<cell|\<vdash\> (A \<rightarrow\> \<neg\>A) \<rightarrow\> \<neg\>A>|<cell|>>>>
+    </align>
+  </theorem>
+
+  <strong|“自杀即死”>如果 A 竟然推导出了它的反面（\<neg\>A），那说明 A 本身就是假的。
+
+  <\proof>
+    \;
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1:<around*|{|A\<rightarrowlim\>\<neg\>A,\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>A<space|7em>Assumption>>|<row|<cell|2:<around*|{|A\<rightarrowlim\>\<neg\>A,\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|A<space|9em>H<rsub|3>>>|<row|<cell|3:<around*|{|A\<rightarrowlim\>\<neg\>A,\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|A\<rightarrowlim\>\<neg\>A<space|6em>Assumption>>|<row|<cell|4:<around*|{|A\<rightarrowlim\>\<neg\>A,\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>A<space|8em>MP 2,3>>|<row|<cell|5:<around*|{|A\<rightarrowlim\>\<neg\>A,\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|A\<rightarrow\><around*|(|\<neg\>A\<rightarrow\>false|)><space|2em>H<rsub|4><space|1em>（本证明核心：爆炸律）>>|<row|<cell|6:<around*|{|A\<rightarrowlim\>\<neg\>A,\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>A\<rightarrow\>false<space|5em>MP2,5>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|7:<around*|{|A \<rightarrow\> \<neg\>A,\<neg\>\<neg\>A|}>>|<cell|\<vdash\>>|<cell|false<space|2em>?<space|5em> MP4,6>>|<row|<cell|8:*\<space\>**<application-space|2em><space|1em><around*|{|A \<rightarrow\> \<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>\<neg\>A\<rightarrow\>false<space|4em>Deduction>>|<row|<cell|9:**\<space\><application-space|2em><space|1em><around*|{|A \<rightarrow\> \<neg\>A|}>>|<cell|\<vdash\>>|<cell|\<neg\>A<space|8em>Reductio>>|<row|<cell|10:**\<space\>\<space\><application-space|1em>*<application-space|2em>*<application-space|2em> <application-space|2em>>|<cell|\<vdash\>>|<cell| (A \<rightarrow\> \<neg\>A) \<rightarrow\> \<neg\>A<space|3em>Deduction>>>>
+    </eqnarray*>
+
+    \;
+  </proof>
+
+  证明核心思想：<math|A\<rightarrowlim\>\<neg\>A>加上<math|A>就能矛盾生万物。
+
+  <section|自创引理>
+
+  何氏定理
+
+  <\theorem>
+    何氏定理——单调推演定理
+
+    For any set of formula <math|\<Sigma\>> and formulas A,B in <math|\<cal*-H\>> :
+
+    <\align>
+      <tformat|<table|<row|<cell|\<Sigma\>\<vdash\>A\<rightarrow\>B >|<cell|if and only if \ \<Sigma\>\<cup\><around*|{|A|}>\<vdash\>A\<rightarrow\>B>>>>
+    </align>
+  </theorem>
+
+  有了这个引理，我们可以方便的添加前提。
+
+  <\proof>
+    \;
+
+    <math|\<Sigma\>\<vdash\>A\<rightarrow\>B\<Rightarrow\>\<Sigma\>\<cup\><around*|{|A|}>\<vdash\>A\<rightarrow\>B> \ Monotonity
+
+    <math|\<Sigma\>\<cup\><around*|{|A|}>\<vdash\>A\<rightarrow\>B:>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Sigma\>\<cup\><around*|{|A|}>>|<cell|\<vdash\>>|<cell|A\<rightarrow\>B>>|<row|<cell|\<Sigma\>>|<cell|\<vdash\>>|<cell|A\<rightarrow\><around*|(|A\<rightarrow\>B|)>>>|<row|<cell|>|<cell|>|<cell|Axiom2 ，略>>|<row|<cell|\<Sigma\>>|<cell|\<vdash\>>|<cell|<around*|(|A\<rightarrow\>A|)>\<rightarrow\><around*|(|A\<rightarrow\>B|)>>>|<row|<cell|\<Sigma\>>|<cell|\<vdash\>>|<cell|<around*|(|A\<rightarrow\>A|)><space|1em>H<rsub|1>>>|<row|<cell|\<Sigma\>>|<cell|\<vdash\>>|<cell|A\<rightarrow\>B>>>>
+    </eqnarray*>
+
+    故<math|\<Sigma\>\<cup\><around*|{|A|}>\<vdash\>A\<rightarrow\>B\<Rightarrow\>\<Sigma\>\<vdash\>A\<rightarrow\>B>
+
+    \;
+  </proof>
+</body>
+
+<\initial>
+  <\collection>
+    <associate|page-medium|paper>
+    <associate|page-screen-margin|false>
+  </collection>
+</initial>
+
+<\references>
+  <\collection>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|3.1|2>>
+    <associate|auto-11|<tuple|3.2|2>>
+    <associate|auto-12|<tuple|3.3|2>>
+    <associate|auto-13|<tuple|3.4|3>>
+    <associate|auto-14|<tuple|4|3>>
+    <associate|auto-15|<tuple|4.1|3>>
+    <associate|auto-16|<tuple|4.2|3>>
+    <associate|auto-17|<tuple|4.3|3>>
+    <associate|auto-18|<tuple|5|4>>
+    <associate|auto-19|<tuple|5.1|4>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-20|<tuple|5.2|4>>
+    <associate|auto-21|<tuple|5.3|5>>
+    <associate|auto-22|<tuple|6|5>>
+    <associate|auto-23|<tuple|6.1|5>>
+    <associate|auto-24|<tuple|6.2|7>>
+    <associate|auto-25|<tuple|6.3|7>>
+    <associate|auto-26|<tuple|6.4|9>>
+    <associate|auto-27|<tuple|6.5|9>>
+    <associate|auto-28|<tuple|6.6|9>>
+    <associate|auto-29|<tuple|6.7|10>>
+    <associate|auto-3|<tuple|1.2|1>>
+    <associate|auto-30|<tuple|6.8|10>>
+    <associate|auto-31|<tuple|7|11>>
+    <associate|auto-4|<tuple|1.3|2>>
+    <associate|auto-5|<tuple|1.4|2>>
+    <associate|auto-6|<tuple|2|2>>
+    <associate|auto-7|<tuple|2.1|2>>
+    <associate|auto-8|<tuple|2.2|2>>
+    <associate|auto-9|<tuple|3|2>>
+  </collection>
+</references>
+
+<\auxiliary>
+  <\collection>
+    <\associate|toc>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Reasoning and Proof><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-1><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Everyday Reasoning<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-2>>
+
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Semantic entailment <with|mode|<quote|math>|\<Sigma\>\<vDash\>A> (语义蕴涵)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|1tab>|1.3<space|2spc>purely semantical approach (纯语义方法)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-4>>
+
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Proof<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-5>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Proof System 形式推演系统><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-6><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Definition of Proof<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-7>>
+
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Kinds of proof system<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-8>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Hilbert-style system \<Sigma\> \<vdash\><with|mode|<quote|math>|<rsub|H>> A><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-9><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|3.1<space|2spc>Alphabet of <with|mode|<quote|math>|\<cal*-H\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-10>>
+
+      <with|par-left|<quote|1tab>|3.2<space|2spc>Formulas of <with|mode|<quote|math>|\<cal*-H\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-11>>
+
+      <with|par-left|<quote|1tab>|3.3<space|2spc>Axioms of <with|mode|<quote|math>|\<cal*-H\>> \ 三条公理（蕴含覆盖，蕴含分配，逆否）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-12>>
+
+      <with|par-left|<quote|1tab>|3.4<space|2spc>Inference Rule 一个推理规则<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-13>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Formal Proof of <with|mode|<quote|math>|\<cal*-H\>>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-14><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|4.1<space|2spc>proof in <with|mode|<quote|math>|\<cal*-H\>><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-15>>
+
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Theorem <with|mode|<quote|math>|H<rsub|1>> （同一律 Identity<with|font-series|<quote|bold>|math-font-series|<quote|bold>|>）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-16>>
+
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Theorem of Soundness 稳健性<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-17>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc><with|mode|<quote|math>|\<cal*-H\>> with Assumption><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-18><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|5.1<space|2spc>Definition<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-19>>
+
+      <with|par-left|<quote|1tab>|5.2<space|2spc>Theorem of Universal Set<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-20>>
+
+      <with|par-left|<quote|1tab>|5.3<space|2spc>Theorem of Monotonicity(单调性)<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-21>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Derived rules in <with|mode|<quote|math>|\<cal*-H\>> \ (二级公式)><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-22><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|6.1<space|2spc>Deduction rule 推演定理<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-23>>
+
+      <with|par-left|<quote|1tab>|6.2<space|2spc>Theorem <with|mode|<quote|math>|H<rsub|2>> （蕴涵传递律 Syllogism）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-24>>
+
+      <with|par-left|<quote|1tab>|6.3<space|2spc>Theorem <with|mode|<quote|math>|H<rsub|3>> （双重否定消除律 Double Negation Elimination）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-25>>
+
+      <with|par-left|<quote|1tab>|6.4<space|2spc>Transitivity rule 蕴含传递<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-26>>
+
+      <with|par-left|<quote|1tab>|6.5<space|2spc>Exchange of antecedent rule \ 蕴含交换律<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-27>>
+
+      <with|par-left|<quote|1tab>|6.6<space|2spc>Theorem <with|mode|<quote|math>|H<rsub|4> > \ (矛盾律 / 爆炸原理 Explosion / Ex Falso Quodlibet )<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-28>>
+
+      <with|par-left|<quote|1tab>|6.7<space|2spc>Theorem <with|mode|<quote|math>|H<rsub|5>> （真值公理 Verum / Falsum）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-29>>
+
+      <with|par-left|<quote|1tab>|6.8<space|2spc>Theorem <with|mode|<quote|math>|H<rsub|6>> （归谬律 Consequentia Mirabilis）<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-30>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>自创引理><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-31><vspace|0.5fn>
+    </associate>
+  </collection>
+</auxiliary>
